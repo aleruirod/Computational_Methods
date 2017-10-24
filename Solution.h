@@ -1,15 +1,7 @@
-#include "vector.h"
-#include "matrix.h"
+#include <vector>
 
 
 class Solution {
-
-	double deltaX = 0.05; // can be changed for different problems.
-	double deltaT = 0.01;// can be changed for different problems.
-	double D = 0.1;// Diffusivity of the material in the problem.
-	int n = 20;// The size of the solution should be 1 ft / deltaX.
-	Matrix allSolutions; //We collect in a matrix all solutions we think will be relevant.
-	Vector solution;// Vector with the solution for a certain timestep.
 
 public:
 	
@@ -27,7 +19,7 @@ public:
 	* @param v Vector taken as solution
 	*/
 
-	Solution(Vector& v /**< Vector&. vector taken as solution */);
+	Solution(std::vector<double> v /**< std::vector<double>. vector taken as solution */);
 
 	// GETTERS
 	/**
@@ -35,14 +27,14 @@ public:
 	* @see getCurrentSolution()
 	*/
 
-	Matrix getAllSolutions();
+	std::vector<std::vector<double>> getAllSolutions();
 
 	/**
 	* Returns current solution stored in the object.
 	* @see getAllSolutions()
 	*/
 
-	Vector getCurrentSolution();
+	std::vector<double> getCurrentSolution();
 
 	// SETTERS
 	/**
@@ -50,14 +42,23 @@ public:
 	* @see setCurrentSolution()
 	*/
 
-	void setAllSolutions();
+	void addToAllSolutions(std::vector<double> v);
 
 	/**
 	* changes the solution attribute of the object.
 	* @see setAllSolutions()
 	*/
 
-	void setCurrentSolution();
+	void setCurrentSolution(std::vector<double> v);
+
+private:
+	double deltaX = 0.05; // can be changed for different problems.
+	double deltaT = 0.01;// can be changed for different problems.
+	double D = 0.1;// Diffusivity of the material in the problem.
+	int n = 20;// The size of the solution should be 1 ft / deltaX.
+	std::vector<std::vector<double>> allSolutions; //We collect in a matrix all solutions we think will be relevant.
+	std::vector<double> solution;// Vector with the solution for a certain timestep.
+
 };
 
 
