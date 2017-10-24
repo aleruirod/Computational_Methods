@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['transpose',['transpose',['../class_matrix.html#a759661b75b9681f3a89ff75e27933b3a',1,'Matrix']]],
-  ['two_5fnorm',['two_norm',['../class_matrix.html#aac496af05ec7aa26afc2b9c6d0ab8b66',1,'Matrix::two_norm()'],['../class_vector.html#a4f501290a50d057bb6c57ea64d7e70a4',1,'Vector::two_norm()']]]
+  ['setallsolutions',['setAllSolutions',['../class_solution.html#a820fbf0f27410781d4f9ed8151d65c67',1,'Solution']]],
+  ['setcurrentsolution',['setCurrentSolution',['../class_solution.html#a5a822dac7b42e37e4a8ddd686a00c26f',1,'Solution']]],
+  ['solution',['Solution',['../class_solution.html#ab55bd4b023d596ce11aaf737b9a6123b',1,'Solution::Solution()'],['../class_solution.html#ad2732696d61865b9ec2f4ce9bd00c607',1,'Solution::Solution(Vector &amp;v)']]]
 ];
