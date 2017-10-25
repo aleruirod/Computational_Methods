@@ -24,8 +24,9 @@ std::vector<double> Solution::getCurrentSolution() {
 }
 
 void Solution::addToAllSolutions(std::vector<double> v) {
-	std::vector<std::vector<double>> newMat = Solution::getAllSolutions();//set the size beforehand.
-	Solution::allSolutions;
+	Solution::allSolutions.resize(allSolPos + 1);
+	Solution::allSolutions[allSolPos] = v;
+	Solution::allSolPos++;
 }
 
 void Solution::setCurrentSolution(std::vector<double> v) {

@@ -146,14 +146,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AnalyticalSolution.cpp" />
+    <ClCompile Include="CrankNicholsonMethod.cpp" />
     <ClCompile Include="DuFortFrankelMethod.cpp" />
-    <ClCompile Include="matrix.cpp" />
-    <ClCompile Include="NumericalSchemes.cpp" />
+    <ClCompile Include="LaasonenMethod.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Output.cpp" />
+    <ClCompile Include="RichardsonMethod.cpp" />
     <ClCompile Include="Solution.cpp" />
     <ClCompile Include="vector.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="matrix.h" />
+    <ClInclude Include="AnalyticalSolution.h" />
+    <ClInclude Include="CrankNicholsonMethod.h" />
+    <ClInclude Include="DuFortFrankelMethod.h" />
+    <ClInclude Include="LaasonenMethod.h" />
+    <ClInclude Include="Output.h" />
+    <ClInclude Include="RichardsonMethod.h" />
     <ClInclude Include="Solution.h" />
     <ClInclude Include="vector.h" />
   </ItemGroup>

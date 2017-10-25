@@ -51,12 +51,13 @@ public:
 
 	void setCurrentSolution(std::vector<double> v);
 
-private:
+protected:
 	double deltaX = 0.05; // can be changed for different problems.
 	double deltaT = 0.01;// can be changed for different problems.
 	double D = 0.1;// Diffusivity of the material in the problem.
-	int n = 20;// The size of the solution should be 1 ft / deltaX.
-	std::vector<std::vector<double>> allSolutions; //We collect in a matrix all solutions we think will be relevant.
+	int n = 20;// The size of the solution should be: 1 ft / deltaX.
+	std::vector<std::vector<double>> allSolutions; //We collect in a vector of vectors all solutions we think will be relevant.
+	int allSolPos = 0;// We control the number of elements inside the allSolutions vector.
 	std::vector<double> solution;// Vector with the solution for a certain timestep.
 
 };
