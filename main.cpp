@@ -1,8 +1,10 @@
-#include "DuFortFrankelMethod.h"
 #include <iostream>
+#include "DuFortFrankelMethod.h"
+#include "Output.h"
+
 
 int main() {
-	DuFortFrankelMethod *sol = new DuFortFrankelMethod();
-	//sol.DuFortFrankelMethod::compute();
-	//std::cout << sol.allSolutions;
+	DuFortFrankelMethod sol = DuFortFrankelMethod();
+	sol.compute();
+	Output::printVector(sol.getAllSolutions());
 }

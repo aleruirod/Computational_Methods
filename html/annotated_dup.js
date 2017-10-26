@@ -1,6 +1,6 @@
 var annotated_dup =
 [
-    [ "Matrix", "class_matrix.html", "class_matrix" ],
+    [ "DuFortFrankelMethod", "class_du_fort_frankel_method.html", "class_du_fort_frankel_method" ],
     [ "Solution", "class_solution.html", "class_solution" ],
     [ "Vector", "class_vector.html", "class_vector" ]
 ];

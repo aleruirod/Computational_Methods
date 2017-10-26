@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['matrix',['Matrix',['../class_matrix.html#a2dba13c45127354c9f75ef576f49269b',1,'Matrix::Matrix()'],['../class_matrix.html#a135a15de1126d735bb95fcc839d739d7',1,'Matrix::Matrix(int Nrows, int Ncols)'],['../class_matrix.html#a765f4dcb51b6829311cc3e7576388423',1,'Matrix::Matrix(const Matrix &amp;m)']]]
+  ['getallsolutions',['getAllSolutions',['../class_solution.html#abd28abd062adb793866fd5e1c8ef8639',1,'Solution']]],
+  ['getcurrentsolution',['getCurrentSolution',['../class_solution.html#ae92d4a6070f6e5879698754fa5547ee3',1,'Solution']]],
+  ['getsize',['getSize',['../class_vector.html#afbb7966ec4107c43ec15cccc47fcaef7',1,'Vector']]]
 ];

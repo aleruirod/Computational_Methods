@@ -1,8 +1,9 @@
 var hierarchy =
 [
-    [ "Solution", "class_solution.html", null ],
+    [ "Solution", "class_solution.html", [
+      [ "DuFortFrankelMethod", "class_du_fort_frankel_method.html", null ]
+    ] ],
     [ "vector", null, [
-      [ "Matrix", "class_matrix.html", null ],
       [ "Vector", "class_vector.html", null ]
     ] ]
 ];

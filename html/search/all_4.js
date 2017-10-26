@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['setallsolutions',['setAllSolutions',['../class_solution.html#a820fbf0f27410781d4f9ed8151d65c67',1,'Solution']]],
-  ['setcurrentsolution',['setCurrentSolution',['../class_solution.html#a5a822dac7b42e37e4a8ddd686a00c26f',1,'Solution']]],
-  ['solution',['Solution',['../class_solution.html',1,'Solution'],['../class_solution.html#ab55bd4b023d596ce11aaf737b9a6123b',1,'Solution::Solution()'],['../class_solution.html#ad2732696d61865b9ec2f4ce9bd00c607',1,'Solution::Solution(Vector &amp;v)']]]
+  ['one_5fnorm',['one_norm',['../class_vector.html#a6752a90058ddef427ca6aed12946a737',1,'Vector']]],
+  ['operator_3c_3c',['operator&lt;&lt;',['../class_vector.html#ac254b27efeb8486ee2f67821e3a21a60',1,'Vector::operator&lt;&lt;()'],['../class_vector.html#a8e755f5550c983df730602890058d990',1,'Vector::operator&lt;&lt;()']]],
+  ['operator_3d',['operator=',['../class_vector.html#ae48c467a9f65d60e2f7455aba4ca1239',1,'Vector']]],
+  ['operator_3d_3d',['operator==',['../class_vector.html#ade5fbd0cd01b034d1907e0c93433320c',1,'Vector']]],
+  ['operator_3e_3e',['operator&gt;&gt;',['../class_vector.html#ac198cff0f4196c66649278458eebf227',1,'Vector::operator&gt;&gt;()'],['../class_vector.html#ab6009b37fac65598b3db164dc4f19fed',1,'Vector::operator&gt;&gt;()']]]
 ];

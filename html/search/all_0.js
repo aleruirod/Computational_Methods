@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['computational_5fmethods',['Computational_Methods',['../md__r_e_a_d_m_e.html',1,'']]]
+  ['addtoallsolutions',['addToAllSolutions',['../class_solution.html#a0ea58d9480ccb4e344c377f4861e1e7f',1,'Solution']]]
 ];

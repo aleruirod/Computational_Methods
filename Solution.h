@@ -1,3 +1,5 @@
+#ifndef SOLUTION_H
+#define SOLUTION_H
 #include <vector>
 
 
@@ -61,5 +63,5 @@ protected:
 	std::vector<double> solution;// Vector with the solution for a certain timestep.
 
 };
-
+#endif
 

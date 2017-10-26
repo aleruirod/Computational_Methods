@@ -1,19 +1,49 @@
 \hypertarget{class_solution}{}\section{Solution Class Reference}
 \label{class_solution}\index{Solution@{Solution}}
+Inheritance diagram for Solution\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_solution}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_solution_ab55bd4b023d596ce11aaf737b9a6123b}{Solution} ()
-\begin{DoxyCompactList}\small\item\em \hyperlink{class_vector}{Vector} with the solution for a certain timestep. \end{DoxyCompactList}\item 
-\hyperlink{class_solution_ad2732696d61865b9ec2f4ce9bd00c607}{Solution} (\hyperlink{class_vector}{Vector} \&v)
 \item 
-\hyperlink{class_matrix}{Matrix} \hyperlink{class_solution_a6e44ed377115a0f5168eab5e844009bc}{get\+All\+Solutions} ()
+\hyperlink{class_solution_a3a2983c7a229e6d7408471b4dc48fe61}{Solution} (std\+::vector$<$ double $>$ v)
 \item 
-\hyperlink{class_vector}{Vector} \hyperlink{class_solution_a62dfee911f620d7b4caf29e0e891c25e}{get\+Current\+Solution} ()
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \hyperlink{class_solution_abd28abd062adb793866fd5e1c8ef8639}{get\+All\+Solutions} ()
 \item 
-void \hyperlink{class_solution_a820fbf0f27410781d4f9ed8151d65c67}{set\+All\+Solutions} ()
+std\+::vector$<$ double $>$ \hyperlink{class_solution_ae92d4a6070f6e5879698754fa5547ee3}{get\+Current\+Solution} ()
 \item 
-void \hyperlink{class_solution_a5a822dac7b42e37e4a8ddd686a00c26f}{set\+Current\+Solution} ()
+void \hyperlink{class_solution_a0ea58d9480ccb4e344c377f4861e1e7f}{add\+To\+All\+Solutions} (std\+::vector$<$ double $>$ v)
+\item 
+void \hyperlink{class_solution_a32dad1b34b687cb439a2a60881e50402}{set\+Current\+Solution} (std\+::vector$<$ double $>$ v)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_solution_a8e97e5534ddcde31983432b8fb2050ff}\label{class_solution_a8e97e5534ddcde31983432b8fb2050ff}} 
+double {\bfseries deltaX} = 0.\+05
+\item 
+\mbox{\Hypertarget{class_solution_a116a08a1a8793618fb5269016cfd9b61}\label{class_solution_a116a08a1a8793618fb5269016cfd9b61}} 
+double {\bfseries deltaT} = 0.\+01
+\item 
+\mbox{\Hypertarget{class_solution_af647b9b893549259060034672babb0f8}\label{class_solution_af647b9b893549259060034672babb0f8}} 
+double {\bfseries D} = 0.\+1
+\item 
+\mbox{\Hypertarget{class_solution_aca95282163f453b465bb1991c596a34e}\label{class_solution_aca95282163f453b465bb1991c596a34e}} 
+int {\bfseries n} = 20
+\item 
+\mbox{\Hypertarget{class_solution_a09fa8d2538a87e8d9cba2ee682f729ac}\label{class_solution_a09fa8d2538a87e8d9cba2ee682f729ac}} 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ {\bfseries all\+Solutions}
+\item 
+\mbox{\Hypertarget{class_solution_af933662f6d08824b37f315fc36678c3b}\label{class_solution_af933662f6d08824b37f315fc36678c3b}} 
+int {\bfseries all\+Sol\+Pos} = 0
+\item 
+\mbox{\Hypertarget{class_solution_ae15c62e099b4ad8a337b62fd05283cd8}\label{class_solution_ae15c62e099b4ad8a337b62fd05283cd8}} 
+std\+::vector$<$ double $>$ {\bfseries solution}
 \end{DoxyCompactItemize}
 
 
@@ -24,18 +54,14 @@ void \hyperlink{class_solution_a5a822dac7b42e37e4a8ddd686a00c26f}{set\+Current\+
 \subsubsection{\texorpdfstring{Solution()}{Solution()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily Solution\+::\+Solution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
-\hyperlink{class_vector}{Vector} with the solution for a certain timestep. 
-
 Creates an empty \hyperlink{class_solution}{Solution} object \begin{DoxySeeAlso}{See also}
 \hyperlink{class_solution}{Solution(\+Vector v)}; 
 \end{DoxySeeAlso}
-\mbox{\Hypertarget{class_solution_ad2732696d61865b9ec2f4ce9bd00c607}\label{class_solution_ad2732696d61865b9ec2f4ce9bd00c607}} 
+\mbox{\Hypertarget{class_solution_a3a2983c7a229e6d7408471b4dc48fe61}\label{class_solution_a3a2983c7a229e6d7408471b4dc48fe61}} 
 \index{Solution@{Solution}!Solution@{Solution}}
 \index{Solution@{Solution}!Solution@{Solution}}
 \subsubsection{\texorpdfstring{Solution()}{Solution()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Solution\+::\+Solution (\begin{DoxyParamCaption}\item[{\hyperlink{class_vector}{Vector} \&}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Solution\+::\+Solution (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{v }\end{DoxyParamCaption})}
 
 creates a \hyperlink{class_solution}{Solution} object from an array. \begin{DoxySeeAlso}{See also}
 \hyperlink{class_solution_ab55bd4b023d596ce11aaf737b9a6123b}{Solution()}; 
@@ -47,50 +73,51 @@ creates a \hyperlink{class_solution}{Solution} object from an array. \begin{Doxy
 \end{DoxyParams}
 
 \begin{DoxyParams}{Parameters}
-{\em v} & \hyperlink{class_vector}{Vector}\&. vector taken as solution \\
+{\em v} & std\+::vector$<$double$>$. vector taken as solution \\
 \hline
 \end{DoxyParams}
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{class_solution_a6e44ed377115a0f5168eab5e844009bc}\label{class_solution_a6e44ed377115a0f5168eab5e844009bc}} 
+\mbox{\Hypertarget{class_solution_a0ea58d9480ccb4e344c377f4861e1e7f}\label{class_solution_a0ea58d9480ccb4e344c377f4861e1e7f}} 
+\index{Solution@{Solution}!add\+To\+All\+Solutions@{add\+To\+All\+Solutions}}
+\index{add\+To\+All\+Solutions@{add\+To\+All\+Solutions}!Solution@{Solution}}
+\subsubsection{\texorpdfstring{add\+To\+All\+Solutions()}{addToAllSolutions()}}
+{\footnotesize\ttfamily void Solution\+::add\+To\+All\+Solutions (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{v }\end{DoxyParamCaption})}
+
+changes all\+Solutions \begin{DoxySeeAlso}{See also}
+\hyperlink{class_solution_a32dad1b34b687cb439a2a60881e50402}{set\+Current\+Solution()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_solution_abd28abd062adb793866fd5e1c8ef8639}\label{class_solution_abd28abd062adb793866fd5e1c8ef8639}} 
 \index{Solution@{Solution}!get\+All\+Solutions@{get\+All\+Solutions}}
 \index{get\+All\+Solutions@{get\+All\+Solutions}!Solution@{Solution}}
 \subsubsection{\texorpdfstring{get\+All\+Solutions()}{getAllSolutions()}}
-{\footnotesize\ttfamily \hyperlink{class_matrix}{Matrix} Solution\+::get\+All\+Solutions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ double $>$ $>$ Solution\+::get\+All\+Solutions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 Returns all solutions stored in the \hyperlink{class_solution}{Solution} object. \begin{DoxySeeAlso}{See also}
-\hyperlink{class_solution_a62dfee911f620d7b4caf29e0e891c25e}{get\+Current\+Solution()} 
+\hyperlink{class_solution_ae92d4a6070f6e5879698754fa5547ee3}{get\+Current\+Solution()} 
 \end{DoxySeeAlso}
-\mbox{\Hypertarget{class_solution_a62dfee911f620d7b4caf29e0e891c25e}\label{class_solution_a62dfee911f620d7b4caf29e0e891c25e}} 
+\mbox{\Hypertarget{class_solution_ae92d4a6070f6e5879698754fa5547ee3}\label{class_solution_ae92d4a6070f6e5879698754fa5547ee3}} 
 \index{Solution@{Solution}!get\+Current\+Solution@{get\+Current\+Solution}}
 \index{get\+Current\+Solution@{get\+Current\+Solution}!Solution@{Solution}}
 \subsubsection{\texorpdfstring{get\+Current\+Solution()}{getCurrentSolution()}}
-{\footnotesize\ttfamily \hyperlink{class_vector}{Vector} Solution\+::get\+Current\+Solution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Solution\+::get\+Current\+Solution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 Returns current solution stored in the object. \begin{DoxySeeAlso}{See also}
-\hyperlink{class_solution_a6e44ed377115a0f5168eab5e844009bc}{get\+All\+Solutions()} 
+\hyperlink{class_solution_abd28abd062adb793866fd5e1c8ef8639}{get\+All\+Solutions()} 
 \end{DoxySeeAlso}
-\mbox{\Hypertarget{class_solution_a820fbf0f27410781d4f9ed8151d65c67}\label{class_solution_a820fbf0f27410781d4f9ed8151d65c67}} 
-\index{Solution@{Solution}!set\+All\+Solutions@{set\+All\+Solutions}}
-\index{set\+All\+Solutions@{set\+All\+Solutions}!Solution@{Solution}}
-\subsubsection{\texorpdfstring{set\+All\+Solutions()}{setAllSolutions()}}
-{\footnotesize\ttfamily void Solution\+::set\+All\+Solutions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-changes all\+Solutions \begin{DoxySeeAlso}{See also}
-\hyperlink{class_solution_a5a822dac7b42e37e4a8ddd686a00c26f}{set\+Current\+Solution()} 
-\end{DoxySeeAlso}
-\mbox{\Hypertarget{class_solution_a5a822dac7b42e37e4a8ddd686a00c26f}\label{class_solution_a5a822dac7b42e37e4a8ddd686a00c26f}} 
+\mbox{\Hypertarget{class_solution_a32dad1b34b687cb439a2a60881e50402}\label{class_solution_a32dad1b34b687cb439a2a60881e50402}} 
 \index{Solution@{Solution}!set\+Current\+Solution@{set\+Current\+Solution}}
 \index{set\+Current\+Solution@{set\+Current\+Solution}!Solution@{Solution}}
 \subsubsection{\texorpdfstring{set\+Current\+Solution()}{setCurrentSolution()}}
-{\footnotesize\ttfamily void Solution\+::set\+Current\+Solution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Solution\+::set\+Current\+Solution (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{v }\end{DoxyParamCaption})}
 
 changes the solution attribute of the object. \begin{DoxySeeAlso}{See also}
-\hyperlink{class_solution_a820fbf0f27410781d4f9ed8151d65c67}{set\+All\+Solutions()} 
+set\+All\+Solutions() 
 \end{DoxySeeAlso}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Solution.\+h\end{DoxyCompactItemize}
+Solution.\+h\item 
+Solution.\+cpp\end{DoxyCompactItemize}
