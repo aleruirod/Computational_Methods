@@ -1,6 +1,4 @@
 #include "DuFortFrankelMethod.h"
-#include <iostream>
-
 
 DuFortFrankelMethod::DuFortFrankelMethod() {}
 
@@ -33,7 +31,7 @@ void DuFortFrankelMethod::compute() {
 	addToAllSolutions(t0Sol);
 	addToAllSolutions(t1Sol);
 	
-	for (int j = 0; j < 3; j++) {
+	for (int j = 0; j < 47; j++) {
 		
 		std::vector<double> compSol(n);
 		compSol[0] = 300.0;

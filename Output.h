@@ -6,7 +6,7 @@
 
 class Output {
 	public:
-		static void printVector(std::vector<std::vector<double>> v);
+		static void printSolution(std::vector<std::vector<double>> v);
 
 };
 #endif

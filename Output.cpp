@@ -2,7 +2,7 @@
 #include "Output.h"
 
 
-void Output::printVector(std::vector<std::vector<double>> v) {
+void Output::printSolution(std::vector<std::vector<double>> v) {
 
 	for (int i = 0; i < v.size(); i++)
 	{
