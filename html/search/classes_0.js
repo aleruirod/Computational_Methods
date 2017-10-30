@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dufortfrankelmethod',['DuFortFrankelMethod',['../class_du_fort_frankel_method.html',1,'']]]
+  ['analyticalsolution',['AnalyticalSolution',['../class_analytical_solution.html',1,'']]]
 ];

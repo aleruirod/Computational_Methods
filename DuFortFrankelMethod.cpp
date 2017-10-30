@@ -16,7 +16,7 @@ void DuFortFrankelMethod::compute() {
 	}
 
 	std::vector<double> t1Sol(n+1);// We use the forward time, central space method to calculate the second timestep
-								//as we need it to use the DuFortFrankelMEthod. This method is stable in our case
+								//as we need it to use the DuFortFrankelMethod. This method is stable in our case
 								// because (D*deltaT)/deltaX^2 = 0.4 (which is <= 0.5 which is the limit for stability)
 
 
@@ -51,8 +51,8 @@ void DuFortFrankelMethod::compute() {
 					+ (((2 * D*deltaT) / (pow(deltaX, 2))) * (getAllSolutions()[allSolPos-1][i + 1] + getAllSolutions()[allSolPos-1][i - 1])))
 				/ (1 + ((2 * D*deltaT) / (pow(deltaX, 2))));
 		}
-
-		addToAllSolutions(compSol);
+		if ((j % 10) == 0)
+			addToAllSolutions(compSol);
 	}
 
 

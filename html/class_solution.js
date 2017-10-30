@@ -11,6 +11,7 @@ var class_solution =
     [ "D", "class_solution.html#af647b9b893549259060034672babb0f8", null ],
     [ "deltaT", "class_solution.html#a116a08a1a8793618fb5269016cfd9b61", null ],
     [ "deltaX", "class_solution.html#a8e97e5534ddcde31983432b8fb2050ff", null ],
+    [ "L", "class_solution.html#afa80e5854fb5af93932f445e426c7f66", null ],
     [ "n", "class_solution.html#aca95282163f453b465bb1991c596a34e", null ],
     [ "solution", "class_solution.html#ae15c62e099b4ad8a337b62fd05283cd8", null ]
 ];
