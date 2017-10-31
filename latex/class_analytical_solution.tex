@@ -15,7 +15,7 @@ Inheritance diagram for Analytical\+Solution\+:\begin{figure}[H]
 \item 
 \hyperlink{class_analytical_solution_a92a4ce87e863ec7f8aac59372306efd2}{Analytical\+Solution} ()
 \item 
-\hyperlink{class_analytical_solution_a9522a4a13b61dcc7f145e0fb39e5016d}{Analytical\+Solution} (std\+::vector$<$ double $>$ v)
+\hyperlink{class_analytical_solution_a4c948fe197127ca544ac53b6eb0e5b48}{Analytical\+Solution} (std\+::vector$<$ std\+::vector$<$ double $>$$>$ sols)
 \item 
 void \hyperlink{class_analytical_solution_ae1ebc556a8dfed55b6c463625545d919}{compute} ()
 \end{DoxyCompactItemize}
@@ -40,25 +40,25 @@ the Analytical \hyperlink{class_solution}{Solution} of the problem gives us the 
 {\footnotesize\ttfamily Analytical\+Solution\+::\+Analytical\+Solution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 Creates an empty \hyperlink{class_analytical_solution}{Analytical\+Solution} object \begin{DoxySeeAlso}{See also}
-\hyperlink{class_analytical_solution}{Analytical\+Solution(\+Vector v)}; 
+\hyperlink{class_analytical_solution}{Analytical\+Solution(\+Vector$<$\+Vector$<$double$>$$>$ sols)}; 
 \end{DoxySeeAlso}
-\mbox{\Hypertarget{class_analytical_solution_a9522a4a13b61dcc7f145e0fb39e5016d}\label{class_analytical_solution_a9522a4a13b61dcc7f145e0fb39e5016d}} 
+\mbox{\Hypertarget{class_analytical_solution_a4c948fe197127ca544ac53b6eb0e5b48}\label{class_analytical_solution_a4c948fe197127ca544ac53b6eb0e5b48}} 
 \index{Analytical\+Solution@{Analytical\+Solution}!Analytical\+Solution@{Analytical\+Solution}}
 \index{Analytical\+Solution@{Analytical\+Solution}!Analytical\+Solution@{Analytical\+Solution}}
 \subsubsection{\texorpdfstring{Analytical\+Solution()}{AnalyticalSolution()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Analytical\+Solution\+::\+Analytical\+Solution (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Analytical\+Solution\+::\+Analytical\+Solution (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ double $>$$>$}]{sols }\end{DoxyParamCaption})}
 
-creates a \hyperlink{class_solution}{Solution} object from an array. \begin{DoxySeeAlso}{See also}
+Creates an \hyperlink{class_analytical_solution}{Analytical\+Solution} object from a vector of double vectors. \begin{DoxySeeAlso}{See also}
 \hyperlink{class_analytical_solution_a92a4ce87e863ec7f8aac59372306efd2}{Analytical\+Solution()}; 
 \end{DoxySeeAlso}
 
 \begin{DoxyParams}{Parameters}
-{\em v} & \hyperlink{class_vector}{Vector} taken as solution \\
+{\em sols} & \hyperlink{class_vector}{Vector} of double vectors that the new \hyperlink{class_solution}{Solution} will use. \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyParams}{Parameters}
-{\em v} & std\+::vector$<$double$>$. vector taken as solution \\
+{\em sols} & std\+::vector$<$std\+::vector$<$double$>$$>$. \hyperlink{class_vector}{Vector} of double vectors that the new \hyperlink{class_solution}{Solution} will use. \\
 \hline
 \end{DoxyParams}
 

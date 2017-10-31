@@ -109,16 +109,12 @@ Inheritance diagram for Solution:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab55bd4b023d596ce11aaf737b9a6123b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#ab55bd4b023d596ce11aaf737b9a6123b">Solution</a> ()</td></tr>
 <tr class="separator:ab55bd4b023d596ce11aaf737b9a6123b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a2983c7a229e6d7408471b4dc48fe61"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#a3a2983c7a229e6d7408471b4dc48fe61">Solution</a> (std::vector&lt; double &gt; v)</td></tr>
-<tr class="separator:a3a2983c7a229e6d7408471b4dc48fe61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd2b9ac1b6ddd327ece034d99fc9cfdd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#acd2b9ac1b6ddd327ece034d99fc9cfdd">Solution</a> (std::vector&lt; std::vector&lt; double &gt;&gt; sols)</td></tr>
+<tr class="separator:acd2b9ac1b6ddd327ece034d99fc9cfdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd28abd062adb793866fd5e1c8ef8639"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#abd28abd062adb793866fd5e1c8ef8639">getAllSolutions</a> ()</td></tr>
 <tr class="separator:abd28abd062adb793866fd5e1c8ef8639"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae92d4a6070f6e5879698754fa5547ee3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#ae92d4a6070f6e5879698754fa5547ee3">getCurrentSolution</a> ()</td></tr>
-<tr class="separator:ae92d4a6070f6e5879698754fa5547ee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ea58d9480ccb4e344c377f4861e1e7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#a0ea58d9480ccb4e344c377f4861e1e7f">addToAllSolutions</a> (std::vector&lt; double &gt; v)</td></tr>
 <tr class="separator:a0ea58d9480ccb4e344c377f4861e1e7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32dad1b34b687cb439a2a60881e50402"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#a32dad1b34b687cb439a2a60881e50402">setCurrentSolution</a> (std::vector&lt; double &gt; v)</td></tr>
-<tr class="separator:a32dad1b34b687cb439a2a60881e50402"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -150,10 +146,6 @@ std::vector&lt; std::vector&lt; double &gt; &gt;&#160;</td><td class="memItemRig
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#af933662f6d08824b37f315fc36678c3b">allSolPos</a> = 0</td></tr>
 <tr class="memdesc:af933662f6d08824b37f315fc36678c3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">We control the number of elements inside the allSolutions vector. <br /></td></tr>
 <tr class="separator:af933662f6d08824b37f315fc36678c3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae15c62e099b4ad8a337b62fd05283cd8"><td class="memItemLeft" align="right" valign="top"><a id="ae15c62e099b4ad8a337b62fd05283cd8"></a>
-std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#ae15c62e099b4ad8a337b62fd05283cd8">solution</a></td></tr>
-<tr class="memdesc:ae15c62e099b4ad8a337b62fd05283cd8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_vector.html">Vector</a> with the solution for a certain timestep. <br /></td></tr>
-<tr class="separator:ae15c62e099b4ad8a337b62fd05283cd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="class_solution.html">Solution</a> class is the base for <br />
@@ -174,12 +166,12 @@ std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Creates an empty <a class="el" href="class_solution.html">Solution</a> object </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="class_solution.html">Solution(Vector v)</a>; </dd></dl>
+<p>Creates an empty <a class="el" href="class_solution.html">Solution</a> object </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="class_solution.html">Solution(Vector&lt;Vector&lt;double&gt;&gt; sols)</a>; </dd></dl>
 
 </div>
 </div>
-<a id="a3a2983c7a229e6d7408471b4dc48fe61"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a2983c7a229e6d7408471b4dc48fe61">&#9670;&nbsp;</a></span>Solution() <span class="overload">[2/2]</span></h2>
+<a id="acd2b9ac1b6ddd327ece034d99fc9cfdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd2b9ac1b6ddd327ece034d99fc9cfdd">&#9670;&nbsp;</a></span>Solution() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -187,22 +179,22 @@ std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><
         <tr>
           <td class="memname">Solution::Solution </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; double &gt;&#160;</td>
-          <td class="paramname"><em>v</em></td><td>)</td>
+          <td class="paramtype">std::vector&lt; std::vector&lt; double &gt;&gt;&#160;</td>
+          <td class="paramname"><em>sols</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>creates a <a class="el" href="class_solution.html">Solution</a> object from an array. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="class_solution.html#ab55bd4b023d596ce11aaf737b9a6123b">Solution()</a>; </dd></dl>
+<p>creates a <a class="el" href="class_solution.html">Solution</a> object from a vector of double vectors. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="class_solution.html#ab55bd4b023d596ce11aaf737b9a6123b">Solution()</a>; </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">v</td><td><a class="el" href="class_vector.html">Vector</a> taken as solution </td></tr>
+    <tr><td class="paramname">sols</td><td><a class="el" href="class_vector.html">Vector</a> of double vectors that the new <a class="el" href="class_solution.html">Solution</a> will use. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">v</td><td>std::vector&lt;double&gt;. vector taken as solution </td></tr>
+    <tr><td class="paramname">sols</td><td>std::vector&lt;std::vector&lt;double&gt;&gt;. <a class="el" href="class_vector.html">Vector</a> of double vectors that the new <a class="el" href="class_solution.html">Solution</a> will use. </td></tr>
   </table>
   </dd>
 </dl>
@@ -225,7 +217,7 @@ std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><
         </tr>
       </table>
 </div><div class="memdoc">
-<p>changes allSolutions </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="class_solution.html#a32dad1b34b687cb439a2a60881e50402">setCurrentSolution()</a> </dd></dl>
+<p>adds a new solution to allSolutions. </p>
 
 </div>
 </div>
@@ -243,44 +235,8 @@ std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns all solutions stored in the <a class="el" href="class_solution.html">Solution</a> object. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="class_solution.html#ae92d4a6070f6e5879698754fa5547ee3">getCurrentSolution()</a> </dd></dl>
-
-</div>
-</div>
-<a id="ae92d4a6070f6e5879698754fa5547ee3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae92d4a6070f6e5879698754fa5547ee3">&#9670;&nbsp;</a></span>getCurrentSolution()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt; double &gt; Solution::getCurrentSolution </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Returns current solution stored in the object. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="class_solution.html#abd28abd062adb793866fd5e1c8ef8639">getAllSolutions()</a> </dd></dl>
-
-</div>
-</div>
-<a id="a32dad1b34b687cb439a2a60881e50402"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32dad1b34b687cb439a2a60881e50402">&#9670;&nbsp;</a></span>setCurrentSolution()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Solution::setCurrentSolution </td>
-          <td>(</td>
-          <td class="paramtype">std::vector&lt; double &gt;&#160;</td>
-          <td class="paramname"><em>v</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>changes the solution attribute of the object. </p><dl class="section see"><dt>See also</dt><dd>setAllSolutions() </dd></dl>
+<p>Returns all solutions stored in the <a class="el" href="class_solution.html">Solution</a> object.</p>
+<p>Returns all solutions stored in a <a class="el" href="class_solution.html">Solution</a> object </p>
 
 </div>
 </div>

@@ -17,10 +17,14 @@ class Output {
 
 		/**
 		* Prints on console all the solutions stored in a Solution object.
-		* @param v This should be the allSolutions attribute from the Solution object we want to check.
+		* @param sols This should be the allSolutions attribute from the Solution object we want to print.
 		*/
 
-		static void printSolution(std::vector<std::vector<double>> v);
+		static void printSolution(std::vector<std::vector<double>> sols /**< std::vector<std::vector<double>>. Vector of double vectors that we want to print. */);
+
+	
+
+		static void exportSolution(Solution obj, double xSize, int n);
 
 };
 #endif

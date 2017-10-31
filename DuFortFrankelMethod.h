@@ -4,7 +4,7 @@
 #include "Solution.h"
 
 /**
-* The DuFortFrankelMethod is an implicit and unconditionally stable method.
+* The DuFortFrankelMethod is an explicit and unconditionally stable method.
 * \n This method is a variation of the RichardsonMethod.
 */
 
@@ -15,19 +15,20 @@ class DuFortFrankelMethod : public Solution {
 		// CONSTRUCTORS
 		/**
 		* Creates an empty DuFortFrankelMethod object
-		* @see DuFortFrankelMethod(Vector v);
+		* @see DuFortFrankelMethod(Vector<Vector<double>> sols);
 		*/
 
 		DuFortFrankelMethod();
 
 		/**
-		* Creates an DuFortFrankelMethod object from an array.
+		* Creates an DuFortFrankelMethod object from a vector of double vectors.
 		* @see DuFortFrankelMethod();
-		* @param v Vector taken as solution
+		* @param sols Vector of double vectors that the new Solution will use.
 		*/
 
-		DuFortFrankelMethod(std::vector<double> v /**< std::vector<double>. vector taken as solution */);
+		DuFortFrankelMethod(std::vector<std::vector<double>> sols /**< std::vector<std::vector<double>>. Vector of double vectors that the new Solution will use. */);
 
+		// COMPUTATION
 		/**
 		* Computes and stores the values for the Solution using this method.
 		*/

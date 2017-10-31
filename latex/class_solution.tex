@@ -15,15 +15,11 @@ Inheritance diagram for Solution\+:\begin{figure}[H]
 \item 
 \hyperlink{class_solution_ab55bd4b023d596ce11aaf737b9a6123b}{Solution} ()
 \item 
-\hyperlink{class_solution_a3a2983c7a229e6d7408471b4dc48fe61}{Solution} (std\+::vector$<$ double $>$ v)
+\hyperlink{class_solution_acd2b9ac1b6ddd327ece034d99fc9cfdd}{Solution} (std\+::vector$<$ std\+::vector$<$ double $>$$>$ sols)
 \item 
 std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \hyperlink{class_solution_abd28abd062adb793866fd5e1c8ef8639}{get\+All\+Solutions} ()
 \item 
-std\+::vector$<$ double $>$ \hyperlink{class_solution_ae92d4a6070f6e5879698754fa5547ee3}{get\+Current\+Solution} ()
-\item 
 void \hyperlink{class_solution_a0ea58d9480ccb4e344c377f4861e1e7f}{add\+To\+All\+Solutions} (std\+::vector$<$ double $>$ v)
-\item 
-void \hyperlink{class_solution_a32dad1b34b687cb439a2a60881e50402}{set\+Current\+Solution} (std\+::vector$<$ double $>$ v)
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -48,10 +44,7 @@ std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \hyperlink{class_solution_a09fa
 \begin{DoxyCompactList}\small\item\em We collect in a vector of vectors all solutions we think will be relevant. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_solution_af933662f6d08824b37f315fc36678c3b}\label{class_solution_af933662f6d08824b37f315fc36678c3b}} 
 int \hyperlink{class_solution_af933662f6d08824b37f315fc36678c3b}{all\+Sol\+Pos} = 0
-\begin{DoxyCompactList}\small\item\em We control the number of elements inside the all\+Solutions vector. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_solution_ae15c62e099b4ad8a337b62fd05283cd8}\label{class_solution_ae15c62e099b4ad8a337b62fd05283cd8}} 
-std\+::vector$<$ double $>$ \hyperlink{class_solution_ae15c62e099b4ad8a337b62fd05283cd8}{solution}
-\begin{DoxyCompactList}\small\item\em \hyperlink{class_vector}{Vector} with the solution for a certain timestep. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em We control the number of elements inside the all\+Solutions vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -67,25 +60,25 @@ The \hyperlink{class_solution}{Solution} class is the base for ~\newline
 {\footnotesize\ttfamily Solution\+::\+Solution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 Creates an empty \hyperlink{class_solution}{Solution} object \begin{DoxySeeAlso}{See also}
-\hyperlink{class_solution}{Solution(\+Vector v)}; 
+\hyperlink{class_solution}{Solution(\+Vector$<$\+Vector$<$double$>$$>$ sols)}; 
 \end{DoxySeeAlso}
-\mbox{\Hypertarget{class_solution_a3a2983c7a229e6d7408471b4dc48fe61}\label{class_solution_a3a2983c7a229e6d7408471b4dc48fe61}} 
+\mbox{\Hypertarget{class_solution_acd2b9ac1b6ddd327ece034d99fc9cfdd}\label{class_solution_acd2b9ac1b6ddd327ece034d99fc9cfdd}} 
 \index{Solution@{Solution}!Solution@{Solution}}
 \index{Solution@{Solution}!Solution@{Solution}}
 \subsubsection{\texorpdfstring{Solution()}{Solution()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Solution\+::\+Solution (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Solution\+::\+Solution (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ double $>$$>$}]{sols }\end{DoxyParamCaption})}
 
-creates a \hyperlink{class_solution}{Solution} object from an array. \begin{DoxySeeAlso}{See also}
+creates a \hyperlink{class_solution}{Solution} object from a vector of double vectors. \begin{DoxySeeAlso}{See also}
 \hyperlink{class_solution_ab55bd4b023d596ce11aaf737b9a6123b}{Solution()}; 
 \end{DoxySeeAlso}
 
 \begin{DoxyParams}{Parameters}
-{\em v} & \hyperlink{class_vector}{Vector} taken as solution \\
+{\em sols} & \hyperlink{class_vector}{Vector} of double vectors that the new \hyperlink{class_solution}{Solution} will use. \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyParams}{Parameters}
-{\em v} & std\+::vector$<$double$>$. vector taken as solution \\
+{\em sols} & std\+::vector$<$std\+::vector$<$double$>$$>$. \hyperlink{class_vector}{Vector} of double vectors that the new \hyperlink{class_solution}{Solution} will use. \\
 \hline
 \end{DoxyParams}
 
@@ -97,37 +90,15 @@ creates a \hyperlink{class_solution}{Solution} object from an array. \begin{Doxy
 \subsubsection{\texorpdfstring{add\+To\+All\+Solutions()}{addToAllSolutions()}}
 {\footnotesize\ttfamily void Solution\+::add\+To\+All\+Solutions (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{v }\end{DoxyParamCaption})}
 
-changes all\+Solutions \begin{DoxySeeAlso}{See also}
-\hyperlink{class_solution_a32dad1b34b687cb439a2a60881e50402}{set\+Current\+Solution()} 
-\end{DoxySeeAlso}
-\mbox{\Hypertarget{class_solution_abd28abd062adb793866fd5e1c8ef8639}\label{class_solution_abd28abd062adb793866fd5e1c8ef8639}} 
+adds a new solution to all\+Solutions. \mbox{\Hypertarget{class_solution_abd28abd062adb793866fd5e1c8ef8639}\label{class_solution_abd28abd062adb793866fd5e1c8ef8639}} 
 \index{Solution@{Solution}!get\+All\+Solutions@{get\+All\+Solutions}}
 \index{get\+All\+Solutions@{get\+All\+Solutions}!Solution@{Solution}}
 \subsubsection{\texorpdfstring{get\+All\+Solutions()}{getAllSolutions()}}
 {\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ double $>$ $>$ Solution\+::get\+All\+Solutions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Returns all solutions stored in the \hyperlink{class_solution}{Solution} object. \begin{DoxySeeAlso}{See also}
-\hyperlink{class_solution_ae92d4a6070f6e5879698754fa5547ee3}{get\+Current\+Solution()} 
-\end{DoxySeeAlso}
-\mbox{\Hypertarget{class_solution_ae92d4a6070f6e5879698754fa5547ee3}\label{class_solution_ae92d4a6070f6e5879698754fa5547ee3}} 
-\index{Solution@{Solution}!get\+Current\+Solution@{get\+Current\+Solution}}
-\index{get\+Current\+Solution@{get\+Current\+Solution}!Solution@{Solution}}
-\subsubsection{\texorpdfstring{get\+Current\+Solution()}{getCurrentSolution()}}
-{\footnotesize\ttfamily std\+::vector$<$ double $>$ Solution\+::get\+Current\+Solution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+Returns all solutions stored in the \hyperlink{class_solution}{Solution} object.
 
-Returns current solution stored in the object. \begin{DoxySeeAlso}{See also}
-\hyperlink{class_solution_abd28abd062adb793866fd5e1c8ef8639}{get\+All\+Solutions()} 
-\end{DoxySeeAlso}
-\mbox{\Hypertarget{class_solution_a32dad1b34b687cb439a2a60881e50402}\label{class_solution_a32dad1b34b687cb439a2a60881e50402}} 
-\index{Solution@{Solution}!set\+Current\+Solution@{set\+Current\+Solution}}
-\index{set\+Current\+Solution@{set\+Current\+Solution}!Solution@{Solution}}
-\subsubsection{\texorpdfstring{set\+Current\+Solution()}{setCurrentSolution()}}
-{\footnotesize\ttfamily void Solution\+::set\+Current\+Solution (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{v }\end{DoxyParamCaption})}
-
-changes the solution attribute of the object. \begin{DoxySeeAlso}{See also}
-set\+All\+Solutions() 
-\end{DoxySeeAlso}
-
+Returns all solutions stored in a \hyperlink{class_solution}{Solution} object 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

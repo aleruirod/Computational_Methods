@@ -1,7 +1,7 @@
 #ifndef ANALYTICAL_H
 #define ANALYTICAL_H
 
-#include "Solution.h"ç
+#include "Solution.h"
 
 /**
 * the Analytical Solution of the problem gives us the exact right
@@ -15,19 +15,20 @@ class AnalyticalSolution : public Solution {
 		// CONSTRUCTORS
 		/**
 		* Creates an empty AnalyticalSolution object
-		* @see AnalyticalSolution(Vector v);
+		* @see AnalyticalSolution(Vector<Vector<double>> sols);
 		*/
 
 		AnalyticalSolution();
 
 		/**
-		* creates a Solution object from an array.
+		* Creates an AnalyticalSolution object from a vector of double vectors.
 		* @see AnalyticalSolution();
-		* @param v Vector taken as solution
+		* @param sols Vector of double vectors that the new Solution will use.
 		*/
 
-		AnalyticalSolution(std::vector<double> v /**< std::vector<double>. vector taken as solution */);
+		AnalyticalSolution(std::vector<std::vector<double>> sols /**< std::vector<std::vector<double>>. Vector of double vectors that the new Solution will use. */);
 
+		//COMPUTATION
 		/**
 		* Computes and stores the values for the Solution using this method.
 		*/

@@ -1,6 +1,6 @@
 #ifndef SOLUTION_H
 #define SOLUTION_H
-#include <vector>
+#include <vector> // we will use the standard vector library provided by the C++ language.
 
 
 /**
@@ -17,48 +17,32 @@ public:
 	// CONSTRUCTORS
 	/**
 	*Creates an empty Solution object
-	* @see Solution(Vector v);
+	* @see Solution(Vector<Vector<double>> sols);
 	*/
 
 	Solution();
 
 	/**
-	* creates a Solution object from an array.
+	* creates a Solution object from a vector of double vectors.
 	* @see Solution();
-	* @param v Vector taken as solution
+	* @param sols Vector of double vectors that the new Solution will use.
 	*/
 
-	Solution(std::vector<double> v /**< std::vector<double>. vector taken as solution */);
+	Solution(std::vector<std::vector<double>> sols /**< std::vector<std::vector<double>>. Vector of double vectors that the new Solution will use. */);
 
 	// GETTERS
 	/**
 	* Returns all solutions stored in the Solution object.
-	* @see getCurrentSolution()
 	*/
 
 	std::vector<std::vector<double>> getAllSolutions();
 
+	// STORING
 	/**
-	* Returns current solution stored in the object.
-	* @see getAllSolutions()
-	*/
-
-	std::vector<double> getCurrentSolution();
-
-	// SETTERS
-	/**
-	* changes allSolutions
-	* @see setCurrentSolution()
+	* adds a new solution to allSolutions.
 	*/
 
 	void addToAllSolutions(std::vector<double> v);
-
-	/**
-	* changes the solution attribute of the object.
-	* @see setAllSolutions()
-	*/
-
-	void setCurrentSolution(std::vector<double> v);
 
 protected:
 	double deltaX = 0.05; //!< Space step. Can be changed for different problems.
@@ -68,7 +52,6 @@ protected:
 	int n = 20;//!< The size of each solution should be: L / deltaX. This controls the size of the solution vectors for every single timestep.
 	std::vector<std::vector<double>> allSolutions; //!< We collect in a vector of vectors all solutions we think will be relevant.
 	int allSolPos = 0;//!< We control the number of elements inside the allSolutions vector.
-	std::vector<double> solution;//!< Vector with the solution for a certain timestep.
 
 };
 #endif

@@ -1,5 +1,9 @@
 \hypertarget{class_richardson_method}{}\section{Richardson\+Method Class Reference}
 \label{class_richardson_method}\index{Richardson\+Method@{Richardson\+Method}}
+
+
+{\ttfamily \#include $<$Richardson\+Method.\+h$>$}
+
 Inheritance diagram for Richardson\+Method\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,12 +13,48 @@ Inheritance diagram for Richardson\+Method\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_richardson_method_aa97632bc79bc1ef3d048c9ad91e51823}\label{class_richardson_method_aa97632bc79bc1ef3d048c9ad91e51823}} 
-{\bfseries Richardson\+Method} (std\+::vector$<$ double $>$ v)
+\hyperlink{class_richardson_method_a01c839ad5a09cd0e0a9e56ad8e43f980}{Richardson\+Method} ()
+\item 
+\hyperlink{class_richardson_method_a11cf699f84bdd051e16983096c6d4979}{Richardson\+Method} (std\+::vector$<$ std\+::vector$<$ double $>$$>$ sols)
 \item 
 void \hyperlink{class_richardson_method_acefe085864b041381f1a7fd3af46d7fb}{compute} ()
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_richardson_method}{Richardson\+Method} is an explicit and unconditionally unstable method. ~\newline
+ This method will produce a solution with an error increasing in time. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_richardson_method_a01c839ad5a09cd0e0a9e56ad8e43f980}\label{class_richardson_method_a01c839ad5a09cd0e0a9e56ad8e43f980}} 
+\index{Richardson\+Method@{Richardson\+Method}!Richardson\+Method@{Richardson\+Method}}
+\index{Richardson\+Method@{Richardson\+Method}!Richardson\+Method@{Richardson\+Method}}
+\subsubsection{\texorpdfstring{Richardson\+Method()}{RichardsonMethod()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Richardson\+Method\+::\+Richardson\+Method (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates an empty \hyperlink{class_richardson_method}{Richardson\+Method} object \begin{DoxySeeAlso}{See also}
+\hyperlink{class_richardson_method}{Richardson\+Method(\+Vector$<$\+Vector$<$double$>$$>$ sols)}; 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_richardson_method_a11cf699f84bdd051e16983096c6d4979}\label{class_richardson_method_a11cf699f84bdd051e16983096c6d4979}} 
+\index{Richardson\+Method@{Richardson\+Method}!Richardson\+Method@{Richardson\+Method}}
+\index{Richardson\+Method@{Richardson\+Method}!Richardson\+Method@{Richardson\+Method}}
+\subsubsection{\texorpdfstring{Richardson\+Method()}{RichardsonMethod()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Richardson\+Method\+::\+Richardson\+Method (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ double $>$$>$}]{sols }\end{DoxyParamCaption})}
+
+Creates an \hyperlink{class_richardson_method}{Richardson\+Method} object from a vector of double vectors. \begin{DoxySeeAlso}{See also}
+\hyperlink{class_richardson_method_a01c839ad5a09cd0e0a9e56ad8e43f980}{Richardson\+Method()}; 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em sols} & \hyperlink{class_vector}{Vector} of double vectors that the new \hyperlink{class_solution}{Solution} will use. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyParams}{Parameters}
+{\em sols} & std\+::vector$<$std\+::vector$<$double$>$$>$. \hyperlink{class_vector}{Vector} of double vectors that the new \hyperlink{class_solution}{Solution} will use. \\
+\hline
+\end{DoxyParams}
 
 
 \subsection{Member Function Documentation}
@@ -24,7 +64,9 @@ void \hyperlink{class_richardson_method_acefe085864b041381f1a7fd3af46d7fb}{compu
 \subsubsection{\texorpdfstring{compute()}{compute()}}
 {\footnotesize\ttfamily void Richardson\+Method\+::compute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Computes and stores the values for the \hyperlink{class_solution}{Solution} using this method. 
+Computes and stores the values for the \hyperlink{class_solution}{Solution} using this method.
+
+Computes and stores the values for the \hyperlink{class_solution}{Solution} using the Richardson method as well as the forward time, central space method for certain timestep. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

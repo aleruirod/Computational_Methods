@@ -1,21 +1,28 @@
 #include "LaasonenMethod.h"
-#include "Output.h"
 
+// CONSTRUCTORS
+/*
+* Default constructor (empty solution)
+*/
 
 LaasonenMethod::LaasonenMethod() {}
 
-LaasonenMethod::LaasonenMethod(std::vector<double> v) {
-	LaasonenMethod::setCurrentSolution(v);
+/*
+* Constructor from a vector of double vectors.
+*/
+
+LaasonenMethod::LaasonenMethod(std::vector<std::vector<double>> sols) {
+	LaasonenMethod::allSolutions = sols;
 }
 
 void LaasonenMethod::addToL(std::vector<double> row) {
-	L.resize(posL + 1);
-	L[posL] = row;
+	Lmat.resize(posL + 1);
+	Lmat[posL] = row;
 	posL++;
 }
 
 std::vector<std::vector<double>> LaasonenMethod::getL() {
-	return L;
+	return Lmat;
 }
 
 

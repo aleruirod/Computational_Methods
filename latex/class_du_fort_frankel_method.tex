@@ -15,7 +15,7 @@ Inheritance diagram for Du\+Fort\+Frankel\+Method\+:\begin{figure}[H]
 \item 
 \hyperlink{class_du_fort_frankel_method_ae4f8e7c2d498265fa8b8e6ea0bd74288}{Du\+Fort\+Frankel\+Method} ()
 \item 
-\hyperlink{class_du_fort_frankel_method_a56355289a2ead5d2aa0092687804597b}{Du\+Fort\+Frankel\+Method} (std\+::vector$<$ double $>$ v)
+\hyperlink{class_du_fort_frankel_method_a5914f09f3f3aa00d0ac1d270e73613e2}{Du\+Fort\+Frankel\+Method} (std\+::vector$<$ std\+::vector$<$ double $>$$>$ sols)
 \item 
 void \hyperlink{class_du_fort_frankel_method_a68b9ad88883a71daba4c2fc92355b173}{compute} ()
 \end{DoxyCompactItemize}
@@ -23,7 +23,7 @@ void \hyperlink{class_du_fort_frankel_method_a68b9ad88883a71daba4c2fc92355b173}{
 
 
 \subsection{Detailed Description}
-The \hyperlink{class_du_fort_frankel_method}{Du\+Fort\+Frankel\+Method} is an implicit and unconditionally stable method. ~\newline
+The \hyperlink{class_du_fort_frankel_method}{Du\+Fort\+Frankel\+Method} is an explicit and unconditionally stable method. ~\newline
  This method is a variation of the \hyperlink{class_richardson_method}{Richardson\+Method}. 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -34,25 +34,25 @@ The \hyperlink{class_du_fort_frankel_method}{Du\+Fort\+Frankel\+Method} is an im
 {\footnotesize\ttfamily Du\+Fort\+Frankel\+Method\+::\+Du\+Fort\+Frankel\+Method (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 Creates an empty \hyperlink{class_du_fort_frankel_method}{Du\+Fort\+Frankel\+Method} object \begin{DoxySeeAlso}{See also}
-\hyperlink{class_du_fort_frankel_method}{Du\+Fort\+Frankel\+Method(\+Vector v)}; 
+\hyperlink{class_du_fort_frankel_method}{Du\+Fort\+Frankel\+Method(\+Vector$<$\+Vector$<$double$>$$>$ sols)}; 
 \end{DoxySeeAlso}
-\mbox{\Hypertarget{class_du_fort_frankel_method_a56355289a2ead5d2aa0092687804597b}\label{class_du_fort_frankel_method_a56355289a2ead5d2aa0092687804597b}} 
+\mbox{\Hypertarget{class_du_fort_frankel_method_a5914f09f3f3aa00d0ac1d270e73613e2}\label{class_du_fort_frankel_method_a5914f09f3f3aa00d0ac1d270e73613e2}} 
 \index{Du\+Fort\+Frankel\+Method@{Du\+Fort\+Frankel\+Method}!Du\+Fort\+Frankel\+Method@{Du\+Fort\+Frankel\+Method}}
 \index{Du\+Fort\+Frankel\+Method@{Du\+Fort\+Frankel\+Method}!Du\+Fort\+Frankel\+Method@{Du\+Fort\+Frankel\+Method}}
 \subsubsection{\texorpdfstring{Du\+Fort\+Frankel\+Method()}{DuFortFrankelMethod()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Du\+Fort\+Frankel\+Method\+::\+Du\+Fort\+Frankel\+Method (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Du\+Fort\+Frankel\+Method\+::\+Du\+Fort\+Frankel\+Method (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ double $>$$>$}]{sols }\end{DoxyParamCaption})}
 
-Creates an \hyperlink{class_du_fort_frankel_method}{Du\+Fort\+Frankel\+Method} object from an array. \begin{DoxySeeAlso}{See also}
+Creates an \hyperlink{class_du_fort_frankel_method}{Du\+Fort\+Frankel\+Method} object from a vector of double vectors. \begin{DoxySeeAlso}{See also}
 \hyperlink{class_du_fort_frankel_method_ae4f8e7c2d498265fa8b8e6ea0bd74288}{Du\+Fort\+Frankel\+Method()}; 
 \end{DoxySeeAlso}
 
 \begin{DoxyParams}{Parameters}
-{\em v} & \hyperlink{class_vector}{Vector} taken as solution \\
+{\em sols} & \hyperlink{class_vector}{Vector} of double vectors that the new \hyperlink{class_solution}{Solution} will use. \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyParams}{Parameters}
-{\em v} & std\+::vector$<$double$>$. vector taken as solution \\
+{\em sols} & std\+::vector$<$std\+::vector$<$double$>$$>$. \hyperlink{class_vector}{Vector} of double vectors that the new \hyperlink{class_solution}{Solution} will use. \\
 \hline
 \end{DoxyParams}
 
@@ -64,7 +64,9 @@ Creates an \hyperlink{class_du_fort_frankel_method}{Du\+Fort\+Frankel\+Method} o
 \subsubsection{\texorpdfstring{compute()}{compute()}}
 {\footnotesize\ttfamily void Du\+Fort\+Frankel\+Method\+::compute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Computes and stores the values for the \hyperlink{class_solution}{Solution} using this method. 
+Computes and stores the values for the \hyperlink{class_solution}{Solution} using this method.
+
+Computes and stores the values for the \hyperlink{class_solution}{Solution} using the Du Fort Frankel method as well as the forward time, central space method for certain timestep. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
