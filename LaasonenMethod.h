@@ -15,6 +15,10 @@ public:
 
 	std::vector<std::vector<double>> getL();
 
+	/**
+	* Computes and stores the values for the Solution using this method.
+	*/
+
 	void compute();
 
 protected:

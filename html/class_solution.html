@@ -27,9 +27,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="descarga.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Computational Methods
    </div>
+   <div id="projectbrief">Implementation of different numerical methods in order to solve a Partial Differential Equation. (Project for the Computational Methods subject).</div>
   </td>
  </tr>
  </tbody>
@@ -87,14 +89,19 @@ $(document).ready(function(){initNavTree('class_solution.html','');});
 <div class="title">Solution Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_solution_8h_source.html">Solution.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Solution:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_solution.png" usemap="#Solution_map" alt=""/>
   <map id="Solution_map" name="Solution_map">
-<area href="class_analytical_solution.html" alt="AnalyticalSolution" shape="rect" coords="0,56,136,80"/>
-<area href="class_du_fort_frankel_method.html" alt="DuFortFrankelMethod" shape="rect" coords="146,56,282,80"/>
+<area href="class_analytical_solution.html" alt="AnalyticalSolution" shape="rect" coords="0,56,144,80"/>
+<area href="class_crank_nicholson_method.html" alt="CrankNicholsonMethod" shape="rect" coords="154,56,298,80"/>
+<area href="class_du_fort_frankel_method.html" alt="DuFortFrankelMethod" shape="rect" coords="308,56,452,80"/>
+<area href="class_laasonen_method.html" alt="LaasonenMethod" shape="rect" coords="462,56,606,80"/>
+<area href="class_richardson_method.html" alt="RichardsonMethod" shape="rect" coords="616,56,760,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -117,11 +124,11 @@ Public Member Functions</h2></td></tr>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a8e97e5534ddcde31983432b8fb2050ff"><td class="memItemLeft" align="right" valign="top"><a id="a8e97e5534ddcde31983432b8fb2050ff"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#a8e97e5534ddcde31983432b8fb2050ff">deltaX</a> = 0.05</td></tr>
-<tr class="memdesc:a8e97e5534ddcde31983432b8fb2050ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">can be changed for different problems. <br /></td></tr>
+<tr class="memdesc:a8e97e5534ddcde31983432b8fb2050ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Space step. Can be changed for different problems. <br /></td></tr>
 <tr class="separator:a8e97e5534ddcde31983432b8fb2050ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a116a08a1a8793618fb5269016cfd9b61"><td class="memItemLeft" align="right" valign="top"><a id="a116a08a1a8793618fb5269016cfd9b61"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#a116a08a1a8793618fb5269016cfd9b61">deltaT</a> = 0.01</td></tr>
-<tr class="memdesc:a116a08a1a8793618fb5269016cfd9b61"><td class="mdescLeft">&#160;</td><td class="mdescRight">can be changed for different problems. <br /></td></tr>
+<tr class="memdesc:a116a08a1a8793618fb5269016cfd9b61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time step. Can be changed for different problems. <br /></td></tr>
 <tr class="separator:a116a08a1a8793618fb5269016cfd9b61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af647b9b893549259060034672babb0f8"><td class="memItemLeft" align="right" valign="top"><a id="af647b9b893549259060034672babb0f8"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#af647b9b893549259060034672babb0f8">D</a> = 0.1</td></tr>
@@ -129,11 +136,11 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 <tr class="separator:af647b9b893549259060034672babb0f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa80e5854fb5af93932f445e426c7f66"><td class="memItemLeft" align="right" valign="top"><a id="afa80e5854fb5af93932f445e426c7f66"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#afa80e5854fb5af93932f445e426c7f66">L</a> = 1.0</td></tr>
-<tr class="memdesc:afa80e5854fb5af93932f445e426c7f66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Length of the problem. <br /></td></tr>
+<tr class="memdesc:afa80e5854fb5af93932f445e426c7f66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spatial size of the problem. <br /></td></tr>
 <tr class="separator:afa80e5854fb5af93932f445e426c7f66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca95282163f453b465bb1991c596a34e"><td class="memItemLeft" align="right" valign="top"><a id="aca95282163f453b465bb1991c596a34e"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#aca95282163f453b465bb1991c596a34e">n</a> = 20</td></tr>
-<tr class="memdesc:aca95282163f453b465bb1991c596a34e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of the solution should be: L / deltaX. <br /></td></tr>
+<tr class="memdesc:aca95282163f453b465bb1991c596a34e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of each solution should be: L / deltaX. This controls the size of the solution vectors for every single timestep. <br /></td></tr>
 <tr class="separator:aca95282163f453b465bb1991c596a34e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09fa8d2538a87e8d9cba2ee682f729ac"><td class="memItemLeft" align="right" valign="top"><a id="a09fa8d2538a87e8d9cba2ee682f729ac"></a>
 std::vector&lt; std::vector&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#a09fa8d2538a87e8d9cba2ee682f729ac">allSolutions</a></td></tr>
@@ -148,7 +155,11 @@ std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><
 <tr class="memdesc:ae15c62e099b4ad8a337b62fd05283cd8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_vector.html">Vector</a> with the solution for a certain timestep. <br /></td></tr>
 <tr class="separator:ae15c62e099b4ad8a337b62fd05283cd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="class_solution.html">Solution</a> class is the base for <br />
+ all other methods used as they all share <br />
+ some common characteristics. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab55bd4b023d596ce11aaf737b9a6123b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab55bd4b023d596ce11aaf737b9a6123b">&#9670;&nbsp;</a></span>Solution() <span class="overload">[1/2]</span></h2>
 

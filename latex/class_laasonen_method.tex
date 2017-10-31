@@ -1,0 +1,49 @@
+\hypertarget{class_laasonen_method}{}\section{Laasonen\+Method Class Reference}
+\label{class_laasonen_method}\index{Laasonen\+Method@{Laasonen\+Method}}
+Inheritance diagram for Laasonen\+Method\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_laasonen_method}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_laasonen_method_a82f953953a8425ad936f75ddc9954a34}\label{class_laasonen_method_a82f953953a8425ad936f75ddc9954a34}} 
+{\bfseries Laasonen\+Method} (std\+::vector$<$ double $>$ v)
+\item 
+\mbox{\Hypertarget{class_laasonen_method_a8eb364e47a161f8ca4700c8899786910}\label{class_laasonen_method_a8eb364e47a161f8ca4700c8899786910}} 
+void {\bfseries add\+ToL} (std\+::vector$<$ double $>$ row)
+\item 
+\mbox{\Hypertarget{class_laasonen_method_a00aa549123730dc16651d06db8377523}\label{class_laasonen_method_a00aa549123730dc16651d06db8377523}} 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ {\bfseries getL} ()
+\item 
+void \hyperlink{class_laasonen_method_ac5507d58a6c59f0ba9eaa3ca54a51f5d}{compute} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_laasonen_method_a9261b579f612bf4ce6b0d85cbe39bb56}\label{class_laasonen_method_a9261b579f612bf4ce6b0d85cbe39bb56}} 
+double {\bfseries C} = (\hyperlink{class_solution_a116a08a1a8793618fb5269016cfd9b61}{deltaT}$\ast$\hyperlink{class_solution_af647b9b893549259060034672babb0f8}{D}) / pow(\hyperlink{class_solution_a8e97e5534ddcde31983432b8fb2050ff}{deltaX}, 2)
+\item 
+\mbox{\Hypertarget{class_laasonen_method_a9bfc5f53066a6dec716d07d046274669}\label{class_laasonen_method_a9bfc5f53066a6dec716d07d046274669}} 
+int {\bfseries posL} = 0
+\item 
+\mbox{\Hypertarget{class_laasonen_method_addfca3dd9aebb1fc71ad049f11a12480}\label{class_laasonen_method_addfca3dd9aebb1fc71ad049f11a12480}} 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ {\bfseries L}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_laasonen_method_ac5507d58a6c59f0ba9eaa3ca54a51f5d}\label{class_laasonen_method_ac5507d58a6c59f0ba9eaa3ca54a51f5d}} 
+\index{Laasonen\+Method@{Laasonen\+Method}!compute@{compute}}
+\index{compute@{compute}!Laasonen\+Method@{Laasonen\+Method}}
+\subsubsection{\texorpdfstring{compute()}{compute()}}
+{\footnotesize\ttfamily void Laasonen\+Method\+::compute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Computes and stores the values for the \hyperlink{class_solution}{Solution} using this method. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Laasonen\+Method.\+h\item 
+Laasonen\+Method.\+cpp\end{DoxyCompactItemize}

@@ -27,9 +27,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="descarga.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Computational Methods
    </div>
+   <div id="projectbrief">Implementation of different numerical methods in order to solve a Partial Differential Equation. (Project for the Computational Methods subject).</div>
   </td>
  </tr>
  </tbody>
@@ -87,6 +89,8 @@ $(document).ready(function(){initNavTree('class_analytical_solution.html','');})
 <div class="title">AnalyticalSolution Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_analytical_solution_8h_source.html">AnalyticalSolution.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for AnalyticalSolution:</div>
 <div class="dyncontent">
@@ -99,11 +103,11 @@ Inheritance diagram for AnalyticalSolution:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9522a4a13b61dcc7f145e0fb39e5016d"><td class="memItemLeft" align="right" valign="top"><a id="a9522a4a13b61dcc7f145e0fb39e5016d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>AnalyticalSolution</b> (std::vector&lt; double &gt; v)</td></tr>
+<tr class="memitem:a92a4ce87e863ec7f8aac59372306efd2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_analytical_solution.html#a92a4ce87e863ec7f8aac59372306efd2">AnalyticalSolution</a> ()</td></tr>
+<tr class="separator:a92a4ce87e863ec7f8aac59372306efd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9522a4a13b61dcc7f145e0fb39e5016d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_analytical_solution.html#a9522a4a13b61dcc7f145e0fb39e5016d">AnalyticalSolution</a> (std::vector&lt; double &gt; v)</td></tr>
 <tr class="separator:a9522a4a13b61dcc7f145e0fb39e5016d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1ebc556a8dfed55b6c463625545d919"><td class="memItemLeft" align="right" valign="top"><a id="ae1ebc556a8dfed55b6c463625545d919"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>compute</b> ()</td></tr>
+<tr class="memitem:ae1ebc556a8dfed55b6c463625545d919"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_analytical_solution.html#ae1ebc556a8dfed55b6c463625545d919">compute</a> ()</td></tr>
 <tr class="separator:ae1ebc556a8dfed55b6c463625545d919"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_solution"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_solution')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_solution.html">Solution</a></td></tr>
 <tr class="memitem:ab55bd4b023d596ce11aaf737b9a6123b inherit pub_methods_class_solution"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#ab55bd4b023d596ce11aaf737b9a6123b">Solution</a> ()</td></tr>
@@ -122,16 +126,17 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>compute</b> ()</td></
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a7790fe079a6319530e2d203c5ff64b23"><td class="memItemLeft" align="right" valign="top"><a id="a7790fe079a6319530e2d203c5ff64b23"></a>
-const double&#160;</td><td class="memItemRight" valign="bottom"><b>PI</b> = 3.141592</td></tr>
+const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_analytical_solution.html#a7790fe079a6319530e2d203c5ff64b23">PI</a> = 3.141592</td></tr>
+<tr class="memdesc:a7790fe079a6319530e2d203c5ff64b23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pi is needed in order to calculate the analytical solution of the problem. <br /></td></tr>
 <tr class="separator:a7790fe079a6319530e2d203c5ff64b23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_solution"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_solution')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_solution.html">Solution</a></td></tr>
 <tr class="memitem:a8e97e5534ddcde31983432b8fb2050ff inherit pro_attribs_class_solution"><td class="memItemLeft" align="right" valign="top"><a id="a8e97e5534ddcde31983432b8fb2050ff"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#a8e97e5534ddcde31983432b8fb2050ff">deltaX</a> = 0.05</td></tr>
-<tr class="memdesc:a8e97e5534ddcde31983432b8fb2050ff inherit pro_attribs_class_solution"><td class="mdescLeft">&#160;</td><td class="mdescRight">can be changed for different problems. <br /></td></tr>
+<tr class="memdesc:a8e97e5534ddcde31983432b8fb2050ff inherit pro_attribs_class_solution"><td class="mdescLeft">&#160;</td><td class="mdescRight">Space step. Can be changed for different problems. <br /></td></tr>
 <tr class="separator:a8e97e5534ddcde31983432b8fb2050ff inherit pro_attribs_class_solution"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a116a08a1a8793618fb5269016cfd9b61 inherit pro_attribs_class_solution"><td class="memItemLeft" align="right" valign="top"><a id="a116a08a1a8793618fb5269016cfd9b61"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#a116a08a1a8793618fb5269016cfd9b61">deltaT</a> = 0.01</td></tr>
-<tr class="memdesc:a116a08a1a8793618fb5269016cfd9b61 inherit pro_attribs_class_solution"><td class="mdescLeft">&#160;</td><td class="mdescRight">can be changed for different problems. <br /></td></tr>
+<tr class="memdesc:a116a08a1a8793618fb5269016cfd9b61 inherit pro_attribs_class_solution"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time step. Can be changed for different problems. <br /></td></tr>
 <tr class="separator:a116a08a1a8793618fb5269016cfd9b61 inherit pro_attribs_class_solution"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af647b9b893549259060034672babb0f8 inherit pro_attribs_class_solution"><td class="memItemLeft" align="right" valign="top"><a id="af647b9b893549259060034672babb0f8"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#af647b9b893549259060034672babb0f8">D</a> = 0.1</td></tr>
@@ -139,11 +144,11 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 <tr class="separator:af647b9b893549259060034672babb0f8 inherit pro_attribs_class_solution"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa80e5854fb5af93932f445e426c7f66 inherit pro_attribs_class_solution"><td class="memItemLeft" align="right" valign="top"><a id="afa80e5854fb5af93932f445e426c7f66"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#afa80e5854fb5af93932f445e426c7f66">L</a> = 1.0</td></tr>
-<tr class="memdesc:afa80e5854fb5af93932f445e426c7f66 inherit pro_attribs_class_solution"><td class="mdescLeft">&#160;</td><td class="mdescRight">Length of the problem. <br /></td></tr>
+<tr class="memdesc:afa80e5854fb5af93932f445e426c7f66 inherit pro_attribs_class_solution"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spatial size of the problem. <br /></td></tr>
 <tr class="separator:afa80e5854fb5af93932f445e426c7f66 inherit pro_attribs_class_solution"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca95282163f453b465bb1991c596a34e inherit pro_attribs_class_solution"><td class="memItemLeft" align="right" valign="top"><a id="aca95282163f453b465bb1991c596a34e"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#aca95282163f453b465bb1991c596a34e">n</a> = 20</td></tr>
-<tr class="memdesc:aca95282163f453b465bb1991c596a34e inherit pro_attribs_class_solution"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of the solution should be: L / deltaX. <br /></td></tr>
+<tr class="memdesc:aca95282163f453b465bb1991c596a34e inherit pro_attribs_class_solution"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of each solution should be: L / deltaX. This controls the size of the solution vectors for every single timestep. <br /></td></tr>
 <tr class="separator:aca95282163f453b465bb1991c596a34e inherit pro_attribs_class_solution"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09fa8d2538a87e8d9cba2ee682f729ac inherit pro_attribs_class_solution"><td class="memItemLeft" align="right" valign="top"><a id="a09fa8d2538a87e8d9cba2ee682f729ac"></a>
 std::vector&lt; std::vector&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#a09fa8d2538a87e8d9cba2ee682f729ac">allSolutions</a></td></tr>
@@ -158,6 +163,79 @@ std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><
 <tr class="memdesc:ae15c62e099b4ad8a337b62fd05283cd8 inherit pro_attribs_class_solution"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_vector.html">Vector</a> with the solution for a certain timestep. <br /></td></tr>
 <tr class="separator:ae15c62e099b4ad8a337b62fd05283cd8 inherit pro_attribs_class_solution"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>the Analytical <a class="el" href="class_solution.html">Solution</a> of the problem gives us the exact right <br />
+ values for our case. This solution will be used to compare <br />
+ the values we get from the other methods used. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a92a4ce87e863ec7f8aac59372306efd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92a4ce87e863ec7f8aac59372306efd2">&#9670;&nbsp;</a></span>AnalyticalSolution() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AnalyticalSolution::AnalyticalSolution </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates an empty <a class="el" href="class_analytical_solution.html">AnalyticalSolution</a> object </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="class_analytical_solution.html">AnalyticalSolution(Vector v)</a>; </dd></dl>
+
+</div>
+</div>
+<a id="a9522a4a13b61dcc7f145e0fb39e5016d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9522a4a13b61dcc7f145e0fb39e5016d">&#9670;&nbsp;</a></span>AnalyticalSolution() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AnalyticalSolution::AnalyticalSolution </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; double &gt;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>creates a <a class="el" href="class_solution.html">Solution</a> object from an array. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="class_analytical_solution.html#a92a4ce87e863ec7f8aac59372306efd2">AnalyticalSolution()</a>; </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td><a class="el" href="class_vector.html">Vector</a> taken as solution </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>std::vector&lt;double&gt;. vector taken as solution </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae1ebc556a8dfed55b6c463625545d919"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1ebc556a8dfed55b6c463625545d919">&#9670;&nbsp;</a></span>compute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AnalyticalSolution::compute </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Computes and stores the values for the <a class="el" href="class_solution.html">Solution</a> using this method. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_analytical_solution_8h_source.html">AnalyticalSolution.h</a></li>
 <li>AnalyticalSolution.cpp</li>

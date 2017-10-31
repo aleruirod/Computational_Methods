@@ -1,5 +1,9 @@
 \hypertarget{class_analytical_solution}{}\section{Analytical\+Solution Class Reference}
 \label{class_analytical_solution}\index{Analytical\+Solution@{Analytical\+Solution}}
+
+
+{\ttfamily \#include $<$Analytical\+Solution.\+h$>$}
+
 Inheritance diagram for Analytical\+Solution\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,19 +13,64 @@ Inheritance diagram for Analytical\+Solution\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_analytical_solution_a9522a4a13b61dcc7f145e0fb39e5016d}\label{class_analytical_solution_a9522a4a13b61dcc7f145e0fb39e5016d}} 
-{\bfseries Analytical\+Solution} (std\+::vector$<$ double $>$ v)
+\hyperlink{class_analytical_solution_a92a4ce87e863ec7f8aac59372306efd2}{Analytical\+Solution} ()
 \item 
-\mbox{\Hypertarget{class_analytical_solution_ae1ebc556a8dfed55b6c463625545d919}\label{class_analytical_solution_ae1ebc556a8dfed55b6c463625545d919}} 
-void {\bfseries compute} ()
+\hyperlink{class_analytical_solution_a9522a4a13b61dcc7f145e0fb39e5016d}{Analytical\+Solution} (std\+::vector$<$ double $>$ v)
+\item 
+void \hyperlink{class_analytical_solution_ae1ebc556a8dfed55b6c463625545d919}{compute} ()
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_analytical_solution_a7790fe079a6319530e2d203c5ff64b23}\label{class_analytical_solution_a7790fe079a6319530e2d203c5ff64b23}} 
-const double {\bfseries PI} = 3.\+141592
-\end{DoxyCompactItemize}
+const double \hyperlink{class_analytical_solution_a7790fe079a6319530e2d203c5ff64b23}{PI} = 3.\+141592
+\begin{DoxyCompactList}\small\item\em Pi is needed in order to calculate the analytical solution of the problem. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+the Analytical \hyperlink{class_solution}{Solution} of the problem gives us the exact right ~\newline
+ values for our case. This solution will be used to compare ~\newline
+ the values we get from the other methods used. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_analytical_solution_a92a4ce87e863ec7f8aac59372306efd2}\label{class_analytical_solution_a92a4ce87e863ec7f8aac59372306efd2}} 
+\index{Analytical\+Solution@{Analytical\+Solution}!Analytical\+Solution@{Analytical\+Solution}}
+\index{Analytical\+Solution@{Analytical\+Solution}!Analytical\+Solution@{Analytical\+Solution}}
+\subsubsection{\texorpdfstring{Analytical\+Solution()}{AnalyticalSolution()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Analytical\+Solution\+::\+Analytical\+Solution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates an empty \hyperlink{class_analytical_solution}{Analytical\+Solution} object \begin{DoxySeeAlso}{See also}
+\hyperlink{class_analytical_solution}{Analytical\+Solution(\+Vector v)}; 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_analytical_solution_a9522a4a13b61dcc7f145e0fb39e5016d}\label{class_analytical_solution_a9522a4a13b61dcc7f145e0fb39e5016d}} 
+\index{Analytical\+Solution@{Analytical\+Solution}!Analytical\+Solution@{Analytical\+Solution}}
+\index{Analytical\+Solution@{Analytical\+Solution}!Analytical\+Solution@{Analytical\+Solution}}
+\subsubsection{\texorpdfstring{Analytical\+Solution()}{AnalyticalSolution()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Analytical\+Solution\+::\+Analytical\+Solution (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{v }\end{DoxyParamCaption})}
+
+creates a \hyperlink{class_solution}{Solution} object from an array. \begin{DoxySeeAlso}{See also}
+\hyperlink{class_analytical_solution_a92a4ce87e863ec7f8aac59372306efd2}{Analytical\+Solution()}; 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em v} & \hyperlink{class_vector}{Vector} taken as solution \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyParams}{Parameters}
+{\em v} & std\+::vector$<$double$>$. vector taken as solution \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_analytical_solution_ae1ebc556a8dfed55b6c463625545d919}\label{class_analytical_solution_ae1ebc556a8dfed55b6c463625545d919}} 
+\index{Analytical\+Solution@{Analytical\+Solution}!compute@{compute}}
+\index{compute@{compute}!Analytical\+Solution@{Analytical\+Solution}}
+\subsubsection{\texorpdfstring{compute()}{compute()}}
+{\footnotesize\ttfamily void Analytical\+Solution\+::compute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Computes and stores the values for the \hyperlink{class_solution}{Solution} using this method. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

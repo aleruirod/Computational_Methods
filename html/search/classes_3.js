@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['solution',['Solution',['../class_solution.html',1,'']]]
+  ['laasonenmethod',['LaasonenMethod',['../class_laasonen_method.html',1,'']]]
 ];

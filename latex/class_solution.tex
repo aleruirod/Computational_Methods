@@ -1,9 +1,13 @@
 \hypertarget{class_solution}{}\section{Solution Class Reference}
 \label{class_solution}\index{Solution@{Solution}}
+
+
+{\ttfamily \#include $<$Solution.\+h$>$}
+
 Inheritance diagram for Solution\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_solution}
+\includegraphics[height=1.473684cm]{class_solution}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -26,19 +30,19 @@ void \hyperlink{class_solution_a32dad1b34b687cb439a2a60881e50402}{set\+Current\+
 \item 
 \mbox{\Hypertarget{class_solution_a8e97e5534ddcde31983432b8fb2050ff}\label{class_solution_a8e97e5534ddcde31983432b8fb2050ff}} 
 double \hyperlink{class_solution_a8e97e5534ddcde31983432b8fb2050ff}{deltaX} = 0.\+05
-\begin{DoxyCompactList}\small\item\em can be changed for different problems. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Space step. Can be changed for different problems. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_solution_a116a08a1a8793618fb5269016cfd9b61}\label{class_solution_a116a08a1a8793618fb5269016cfd9b61}} 
 double \hyperlink{class_solution_a116a08a1a8793618fb5269016cfd9b61}{deltaT} = 0.\+01
-\begin{DoxyCompactList}\small\item\em can be changed for different problems. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Time step. Can be changed for different problems. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_solution_af647b9b893549259060034672babb0f8}\label{class_solution_af647b9b893549259060034672babb0f8}} 
 double \hyperlink{class_solution_af647b9b893549259060034672babb0f8}{D} = 0.\+1
 \begin{DoxyCompactList}\small\item\em Diffusivity of the material in the problem. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_solution_afa80e5854fb5af93932f445e426c7f66}\label{class_solution_afa80e5854fb5af93932f445e426c7f66}} 
 double \hyperlink{class_solution_afa80e5854fb5af93932f445e426c7f66}{L} = 1.\+0
-\begin{DoxyCompactList}\small\item\em Length of the problem. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Spatial size of the problem. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_solution_aca95282163f453b465bb1991c596a34e}\label{class_solution_aca95282163f453b465bb1991c596a34e}} 
 int \hyperlink{class_solution_aca95282163f453b465bb1991c596a34e}{n} = 20
-\begin{DoxyCompactList}\small\item\em The size of the solution should be\+: L / deltaX. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The size of each solution should be\+: L / deltaX. This controls the size of the solution vectors for every single timestep. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_solution_a09fa8d2538a87e8d9cba2ee682f729ac}\label{class_solution_a09fa8d2538a87e8d9cba2ee682f729ac}} 
 std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \hyperlink{class_solution_a09fa8d2538a87e8d9cba2ee682f729ac}{all\+Solutions}
 \begin{DoxyCompactList}\small\item\em We collect in a vector of vectors all solutions we think will be relevant. \end{DoxyCompactList}\item 
@@ -49,6 +53,11 @@ int \hyperlink{class_solution_af933662f6d08824b37f315fc36678c3b}{all\+Sol\+Pos} 
 std\+::vector$<$ double $>$ \hyperlink{class_solution_ae15c62e099b4ad8a337b62fd05283cd8}{solution}
 \begin{DoxyCompactList}\small\item\em \hyperlink{class_vector}{Vector} with the solution for a certain timestep. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+The \hyperlink{class_solution}{Solution} class is the base for ~\newline
+ all other methods used as they all share ~\newline
+ some common characteristics. 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_solution_ab55bd4b023d596ce11aaf737b9a6123b}\label{class_solution_ab55bd4b023d596ce11aaf737b9a6123b}} 
