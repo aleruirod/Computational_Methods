@@ -18,5 +18,5 @@ int main() {
 	Output::printSolution(analyt.getAllSolutions());
 	LaasonenMethod laasonenSol = LaasonenMethod();
 	laasonenSol.compute();
-	Output::printSolution(laasonenSol.getL());
+	Output::printSolution(laasonenSol.getT());
 }
