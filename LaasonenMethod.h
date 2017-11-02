@@ -27,10 +27,6 @@ public:
 
 	std::vector<std::vector<double>> getT();
 
-	void addToD(double d);
-
-	std::vector<double> getD();
-
 	//COMPUTATION
 	/**
 	* Computes and stores the values for the Solution using this method.
@@ -40,9 +36,10 @@ public:
 
 protected:
 	double C = (deltaT*D) / pow(deltaX, 2); //For the Laasonen method, the C coeficient is constant throughout the whole problem.
+	double aCoef = -C;
+	double bCoef = (2 * C + 1);
+	double cCoef = -C;
 	int posT = 0;
-	int posD = 0;
 	std::vector<std::vector<double>> Tmat;
-	std::vector<double> Dvec;
 };
 #endif

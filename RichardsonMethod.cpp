@@ -45,24 +45,23 @@ void RichardsonMethod::compute() {
 			* (t0Sol[i + 1] - 2 * t0Sol[i] + t0Sol[i - 1]);// this is the formula for the forward time central space scheme.
 	}
 
-	for (int j = 0; j < 51; j++) { // we choose 51 as the limit of the loop as we need at least 50 timesteps to get to t = 0.5.
+	std::vector<double> compSol(n + 1);
+	compSol[0] = 300.0;
+	compSol[n] = 300.0;
+	std::vector<double> prevSol1 = t1Sol;
+	std::vector<double> prevSol2 = t0Sol;
 
-		std::vector<double> compSol(n + 1);
-		compSol[0] = 300.0;
-		compSol[n] = 300.0;
+	for (int j = 1; j < 51; j++) { // we choose 51 as the limit of the loop as we need at least 50 timesteps to get to t = 0.5.
+
 		for (int i = 1; i < compSol.size() - 1; i++) {
 
-			if (j == 0) {// for the first application of the Richardson Method we need t0 and t1 (previously calculated).
-				compSol[i] = ((2*deltaT*D*((t1Sol[i+1] - 2*t1Sol[i] + t1Sol[i-1])/pow(deltaX,2))) + t0Sol[i]);
-			}
-			else if (j == 1) {// for the second application we just need t1 and the previous value calculated by this method.
-				compSol[i] = ((2 * deltaT*D*((getAllSolutions()[allSolPos - 1][i + 1] - 2 * getAllSolutions()[allSolPos - 1][i] + getAllSolutions()[allSolPos - 1][i - 1]) / pow(deltaX, 2))) + t1Sol[i]);
-			}
-			else // from now on we can just use values calculated by the Richardson Method.
-				compSol[i] = ((2 * deltaT*D*((getAllSolutions()[allSolPos - 1][i + 1] - 2 * getAllSolutions()[allSolPos - 1][i] + getAllSolutions()[allSolPos - 1][i - 1]) / pow(deltaX, 2)))
-					+ getAllSolutions()[allSolPos - 2][i]);
+			compSol[i] = ((2 * deltaT*D*((prevSol1[i + 1] - 2 * prevSol1[i] + prevSol1[i - 1]) / pow(deltaX, 2))) + prevSol2[i]);
+			
 		}
 		if ((j % 10) == 0)// We store the values for t = 0.1, 0.2,...,0.5 (every 10 timesteps).
 			addToAllSolutions(compSol);
+
+		prevSol2 = prevSol1;
+		prevSol1 = compSol;
 	}
 }

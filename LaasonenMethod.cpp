@@ -1,4 +1,5 @@
 #include "LaasonenMethod.h"
+#include <iostream>
 
 // CONSTRUCTORS
 /*
@@ -25,82 +26,77 @@ std::vector<std::vector<double>> LaasonenMethod::getT() {
 	return Tmat;
 }
 
-void LaasonenMethod::addToD(double d) {
-	Dvec.resize(posD + 1);
-	Dvec[posD] = d;
-	posD++;
-}
-
-std::vector<double> LaasonenMethod::getD() {
-	return Dvec;
-}
-
 void LaasonenMethod::compute() {
 
-	//std::vector<double> rowT(n - 1, 0.0);
+	std::vector<double> rowT(n - 1, 0.0);
 
-	//for (int i = 0; i < rowT.size(); i++) {
-	//	
-	//	if (i == 0) {
-	//		rowT[i] = -(2*C + 1);
-	//		rowT[i + 1] = C;
+	for (int i = 0; i < rowT.size(); i++) {
+		
+		if (i == 0) {
+			rowT[i] = bCoef;
+			rowT[i + 1] = cCoef;
 
-	//	} else if (i == rowT.size() - 1) {
-	//		rowT[i - 1] = C;
-	//		rowT[i] = -(2*C + 1);
+		} else if (i == rowT.size() - 1) {
+			rowT[i - 1] = aCoef;
+			rowT[i] = bCoef;
 
-	//	} else {
-	//		rowT[i - 1] = C;
-	//		rowT[i] = -(2 * C + 1);
-	//		rowT[i + 1] = C;
-	//	}
+		} else {
+			rowT[i - 1] = aCoef;
+			rowT[i] = bCoef;
+			rowT[i + 1] = cCoef;
+		}
 
-	//	addToT(rowT);
-	//	std::fill(rowT.begin(), rowT.end(), 0.0); // we reset the vector to all zeros again
-	//	
-	//}
+		addToT(rowT);
+		std::fill(rowT.begin(), rowT.end(), 0.0); // we reset the vector to all zeros again
+		
+	}
 
-	std::vector<double> x0(n - 1, 100.0);
-	x0[0] = 300.0;
-	x0[n - 2] = 300.0;
-	std::vector<double> x(n - 1);
+	std::vector<double> previousX(n + 1, 100.0);
+	previousX[0] = 300.0;
+	previousX[n] = 300.0;
+	std::vector<double> x(n + 1,100.0);
 	x[0] = 300.0;
-	x[n - 2] = 300.0;
+	x[n] = 300.0;
+	addToAllSolutions(x);
+	std::vector<double> d(n - 1);
+	std::vector<double> cStar(n - 1);
+	std::vector<double> dStar(n - 1);
 
-	for (int j = 0; j < 51; j++) {
-
-
-		if (j == 0) {
+	for (int j = 1; j < 51; j++) {
 			
-			for (int i = 0; i < n-2; i++) {
+		for (int i = 0; i < n - 1; i++) {
 
-				if (i == 0) {
-					d[i] = x0[i] - C*x[0];
-					cStar[i] = C / -(2 * C + 1);
-					dStar[i] = d[i] / -(2 * C + 1);
-				}
-				else if (i == n - 3) {
-					d[i] = x0[i] - C*x[n - 2];
-					cStar[i] = C / (-(2 * C + 1) - cStar[i - 1] * C);
-					dStar[i] = (d[i] - dStar[i - 1] * C)/(-(2*C+1) - cStar[i - 1]*C);
-				}
-				else {
-					d[i] = x0[i];
-					cStar[i] = C / (-(2 * C + 1) - cStar[i - 1] * C);
-					dStar[i] = (d[i] - dStar[i - 1] * C) / (-(2 * C + 1) - cStar[i - 1] * C);
-				}
+			if (i == 0) {
 
-			
-			}
-			
-			for (int k = n-3; k > 0; k--) {
-				if (k == n - 3)
-					x[n - 3] = dStar[n - 3];
-				else
-					x[k] = dStar[n - 3] - cStar[k] * x[k + 1];
+				d[i] = previousX[i + 1] - aCoef*x[0];
+				cStar[i] = cCoef / bCoef;
+				dStar[i] = d[i] / bCoef;
+
+			} else if (i == n - 2) {
+
+				d[i] = previousX[i + 1] - cCoef*x[n];
+				cStar[i] = 0 / (bCoef - cStar[i - 1] * aCoef);
+				dStar[i] = (d[i] - dStar[i - 1] * aCoef) / (bCoef - cStar[i - 1] * aCoef);
+
+			} else {
+
+				d[i] = previousX[i + 1];
+				cStar[i] = cCoef / (bCoef - cStar[i - 1] * aCoef);
+				dStar[i] = (d[i] - dStar[i - 1] * aCoef) / (bCoef - cStar[i - 1] * aCoef);
 			}
 			
 		}
+			
+		for (int k = n - 1; k > 0; k--) {
+			if (k == n - 1)
+				x[k] = dStar[k - 1];
+			else
+				x[k] = dStar[k - 1] - cStar[k - 1] * x[k + 1];
+		}
 
+		if ((j % 10) == 0) // We store the values for t = 0.1, 0.2,...,0.5 (every 10 timesteps).
+			addToAllSolutions(x);
+
+		previousX = x;
 	}
 }

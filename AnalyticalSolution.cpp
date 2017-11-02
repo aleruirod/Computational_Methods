@@ -33,11 +33,13 @@ void AnalyticalSolution::compute() {
 
 	addToAllSolutions(t0AnSol);// we need to store the values for t = 0.0.
 
+	std::vector<double> anSol(n + 1);
+	anSol[0] = 300.0;
+	anSol[n] = 300.0;
+
 	for (int j = 1; j < 51; j++) { // we choose 51 as the limit of the loop as we need at least 50 timesteps to get to t = 0.5.
 
-		std::vector<double> anSol(n+1);
-		anSol[0] = 300.0;
-		anSol[n] = 300.0;
+		
 		for (int i = 1; i < anSol.size() - 1; i++) {
 			double sum = 0.0;
 			for (int m = 1; m < 1000; m++) // we need the sum of a big number of elements in order to have a good result so a 1000 will probably be enough.
