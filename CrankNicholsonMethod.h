@@ -30,5 +30,10 @@ public:
 
 	void compute();
 
+protected:
+	double C = (deltaT*D) / pow(deltaX, 2); //For the Laasonen method, the C coefficient is constant throughout the whole problem.
+	double aCoef = -C/2; //!< the value for the a coefficient is defined when studying the formation of the tridiagonal matrix.
+	double bCoef = (1 + C); //!< the value for the b coefficient is defined when studying the formation of the tridiagonal matrix.
+	double cCoef = -C/2; //!< the value for the c coefficient is defined when studying the formation of the tridiagonal matrix.
 };
 #endif

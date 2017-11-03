@@ -48,7 +48,7 @@ void RichardsonMethod::compute() {
 	std::vector<double> compSol(n + 1);
 	compSol[0] = 300.0;
 	compSol[n] = 300.0;
-	std::vector<double> prevSol1 = t1Sol;
+	std::vector<double> prevSol1 = t1Sol;// we need to keep track of the solutions for the two previous timesteps in order to satisfy the algorithm.
 	std::vector<double> prevSol2 = t0Sol;
 
 	for (int j = 1; j < 51; j++) { // we choose 51 as the limit of the loop as we need at least 50 timesteps to get to t = 0.5.

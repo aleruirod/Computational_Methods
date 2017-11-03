@@ -23,10 +23,6 @@ public:
 
 	LaasonenMethod(std::vector<std::vector<double>> sols /**< std::vector<std::vector<double>>. Vector of double vectors that the new Solution will use. */);
 
-	void addToT(std::vector<double> row);
-
-	std::vector<std::vector<double>> getT();
-
 	//COMPUTATION
 	/**
 	* Computes and stores the values for the Solution using this method.
@@ -35,11 +31,9 @@ public:
 	void compute();
 
 protected:
-	double C = (deltaT*D) / pow(deltaX, 2); //For the Laasonen method, the C coeficient is constant throughout the whole problem.
-	double aCoef = -C;
-	double bCoef = (2 * C + 1);
-	double cCoef = -C;
-	int posT = 0;
-	std::vector<std::vector<double>> Tmat;
+	double C = (deltaT*D) / pow(deltaX, 2); //For the Laasonen method, the C coefficient is constant throughout the whole problem.
+	double aCoef = -C; //!< the value for the a coefficient is defined when studying the formation of the tridiagonal matrix.
+	double bCoef = (2 * C + 1); //!< the value for the b coefficient is defined when studying the formation of the tridiagonal matrix.
+	double cCoef = -C; //!< the value for the c coefficient is defined when studying the formation of the tridiagonal matrix.
 };
 #endif
