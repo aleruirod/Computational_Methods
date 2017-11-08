@@ -2,6 +2,7 @@
 #define OUTPUT_H
 
 #include <vector>
+#include <string>
 #include "Solution.h"//we will print Solution objects.
 
 
@@ -22,9 +23,7 @@ class Output {
 
 		static void printSolution(std::vector<std::vector<double>> sols /**< std::vector<std::vector<double>>. Vector of double vectors that we want to print. */);
 
-	
-
-		static void exportSolution(Solution obj, double xSize, int n);
+		static void exportSolution(Solution obj, double xSize, std::string name);
 
 };
 #endif

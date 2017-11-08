@@ -15,15 +15,17 @@ CrankNicholsonMethod::CrankNicholsonMethod(std::vector<std::vector<double>> sols
 	CrankNicholsonMethod::allSolutions = sols;
 }
 
+// COMPUTATION
+/**
+* Computes and stores the values for the Solution using the Crank Nicholson method, for this, we will carry out the Thomas Algorithm.
+*/
+
 void CrankNicholsonMethod::compute() {
 
-	std::vector<double> previousX(n + 1, 100.0); // we need to keep track for the solutions of the previous timestep to satisfy the Thomas algorithm.
-	previousX[0] = 300.0;
-	previousX[n] = 300.0;
-	std::vector<double> x(n + 1, 100.0);
-	x[0] = 300.0;
-	x[n] = 300.0;
+	std::vector<double> previousX = Tools::createT0Vector(n + 1); // we need to keep track for the solutions of the previous timestep to satisfy the Thomas algorithm.
+	std::vector<double> x = Tools::createT0Vector(n + 1);
 	addToAllSolutions(x);
+
 	std::vector<double> d(n - 1); // this is the d vector used in the Thomas algorithm
 	std::vector<double> cStar(n - 1);// These are the c* and d* vectors used during the forward and backward substitution phases of the algorithm.
 	std::vector<double> dStar(n - 1);

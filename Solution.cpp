@@ -24,6 +24,14 @@ std::vector<std::vector<double>> Solution::getAllSolutions() {
 	return Solution::allSolutions;
 }
 
+double Solution::getDeltaX() {
+	return deltaX;
+}
+
+double Solution::getDeltaT() {
+	return deltaT;
+}
+
 //STORING
 /**
 * adds a new solution to allSolutions.

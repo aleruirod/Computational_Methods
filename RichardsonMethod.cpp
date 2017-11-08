@@ -22,17 +22,11 @@ RichardsonMethod::RichardsonMethod(std::vector<std::vector<double>> sols) {
 
 void RichardsonMethod::compute() {
 
-	std::vector<double> t0Sol(n + 1);// we start by creating a solution vector for the first timestep which will use the boundary conditions.
-	for (int i = 0; i < t0Sol.size(); i++) {
-		if (i == 0 || i == n)
-			t0Sol[i] = 300.0; //both first and last values will be 300.0.
-		else
-			t0Sol[i] = 100.0;// all other values will be 100.0.
-	}
+	std::vector<double> t0Sol = Tools::createT0Vector(n + 1);// we start by creating a solution vector for the first timestep which will follow the boundary conditions.
 
 	addToAllSolutions(t0Sol);// we need to store the values for t = 0.0.
 
-	std::vector<double> t1Sol(n + 1);// We use the forward time, central space method to calculate the second timestep
+	std::vector<double> t1Sol = Tools::createT0Vector(n + 1);// We use the forward time, central space method to calculate the second timestep
 									 //as we need it to use the Richardson Method. This method is stable in our case
 									 // because (D*deltaT)/deltaX^2 = 0.4 (which is <= 0.5 which is the limit for stability)
 
@@ -45,9 +39,8 @@ void RichardsonMethod::compute() {
 			* (t0Sol[i + 1] - 2 * t0Sol[i] + t0Sol[i - 1]);// this is the formula for the forward time central space scheme.
 	}
 
-	std::vector<double> compSol(n + 1);
-	compSol[0] = 300.0;
-	compSol[n] = 300.0;
+	std::vector<double> compSol = Tools::createT0Vector(n + 1);
+	
 	std::vector<double> prevSol1 = t1Sol;// we need to keep track of the solutions for the two previous timesteps in order to satisfy the algorithm.
 	std::vector<double> prevSol2 = t0Sol;
 

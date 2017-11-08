@@ -154,6 +154,7 @@
     <ClCompile Include="Output.cpp" />
     <ClCompile Include="RichardsonMethod.cpp" />
     <ClCompile Include="Solution.cpp" />
+    <ClCompile Include="Tools.cpp" />
     <ClCompile Include="vector.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -164,6 +165,7 @@
     <ClInclude Include="Output.h" />
     <ClInclude Include="RichardsonMethod.h" />
     <ClInclude Include="Solution.h" />
+    <ClInclude Include="Tools.h" />
     <ClInclude Include="vector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -1,6 +1,7 @@
 #ifndef SOLUTION_H
 #define SOLUTION_H
 #include <vector> // we will use the standard vector library provided by the C++ language.
+#include "Tools.h"
 
 
 /**
@@ -36,6 +37,10 @@ public:
 	*/
 
 	std::vector<std::vector<double>> getAllSolutions();
+
+	double getDeltaX();
+
+	double getDeltaT();
 
 	// STORING
 	/**

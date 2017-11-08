@@ -22,20 +22,11 @@ AnalyticalSolution::AnalyticalSolution(std::vector<std::vector<double>> sols) {
 
 void AnalyticalSolution::compute() {
 
-	std::vector<double> t0AnSol(n + 1); // we start by creating a solution vector for the first timestep which will use the boundary conditions.
-
-	for (int i = 0; i < t0AnSol.size(); i++) {
-		if (i == 0 || i == n)
-			t0AnSol[i] = 300.0; //both first and last values will be 300.0.
-		else
-			t0AnSol[i] = 100.0;// all other values will be 100.0.
-	}
+	std::vector<double> t0AnSol = Tools::createT0Vector(n + 1); // we start by creating a solution vector for the first timestep which will use the boundary conditions.
 
 	addToAllSolutions(t0AnSol);// we need to store the values for t = 0.0.
 
-	std::vector<double> anSol(n + 1);
-	anSol[0] = 300.0;
-	anSol[n] = 300.0;
+	std::vector<double> anSol = Tools::createT0Vector(n + 1);
 
 	for (int j = 1; j < 51; j++) { // we choose 51 as the limit of the loop as we need at least 50 timesteps to get to t = 0.5.
 
