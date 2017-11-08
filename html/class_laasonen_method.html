@@ -105,12 +105,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1bff2dc73fc66c3070fc7a187ff556f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55dc0b88c2298a492d186564b9baed26"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_laasonen_method.html#a55dc0b88c2298a492d186564b9baed26">LaasonenMethod</a> (std::vector&lt; std::vector&lt; double &gt;&gt; sols)</td></tr>
 <tr class="separator:a55dc0b88c2298a492d186564b9baed26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8eb364e47a161f8ca4700c8899786910"><td class="memItemLeft" align="right" valign="top"><a id="a8eb364e47a161f8ca4700c8899786910"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addToL</b> (std::vector&lt; double &gt; row)</td></tr>
-<tr class="separator:a8eb364e47a161f8ca4700c8899786910"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00aa549123730dc16651d06db8377523"><td class="memItemLeft" align="right" valign="top"><a id="a00aa549123730dc16651d06db8377523"></a>
-std::vector&lt; std::vector&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getL</b> ()</td></tr>
-<tr class="separator:a00aa549123730dc16651d06db8377523"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5507d58a6c59f0ba9eaa3ca54a51f5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_laasonen_method.html#ac5507d58a6c59f0ba9eaa3ca54a51f5d">compute</a> ()</td></tr>
 <tr class="separator:ac5507d58a6c59f0ba9eaa3ca54a51f5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_solution"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_solution')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_solution.html">Solution</a></td></tr>
@@ -120,6 +114,12 @@ std::vector&lt; std::vector&lt; double &gt; &gt;&#160;</td><td class="memItemRig
 <tr class="separator:acd2b9ac1b6ddd327ece034d99fc9cfdd inherit pub_methods_class_solution"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd28abd062adb793866fd5e1c8ef8639 inherit pub_methods_class_solution"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#abd28abd062adb793866fd5e1c8ef8639">getAllSolutions</a> ()</td></tr>
 <tr class="separator:abd28abd062adb793866fd5e1c8ef8639 inherit pub_methods_class_solution"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45756ea0f3bbd5a69e1ddcd12379f398 inherit pub_methods_class_solution"><td class="memItemLeft" align="right" valign="top"><a id="a45756ea0f3bbd5a69e1ddcd12379f398"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>getDeltaX</b> ()</td></tr>
+<tr class="separator:a45756ea0f3bbd5a69e1ddcd12379f398 inherit pub_methods_class_solution"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5e6d31c8b567a20dce17b802242bd02 inherit pub_methods_class_solution"><td class="memItemLeft" align="right" valign="top"><a id="ab5e6d31c8b567a20dce17b802242bd02"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>getDeltaT</b> ()</td></tr>
+<tr class="separator:ab5e6d31c8b567a20dce17b802242bd02 inherit pub_methods_class_solution"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ea58d9480ccb4e344c377f4861e1e7f inherit pub_methods_class_solution"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#a0ea58d9480ccb4e344c377f4861e1e7f">addToAllSolutions</a> (std::vector&lt; double &gt; v)</td></tr>
 <tr class="separator:a0ea58d9480ccb4e344c377f4861e1e7f inherit pub_methods_class_solution"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -128,12 +128,18 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a9261b579f612bf4ce6b0d85cbe39bb56"><td class="memItemLeft" align="right" valign="top"><a id="a9261b579f612bf4ce6b0d85cbe39bb56"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>C</b> = (<a class="el" href="class_solution.html#a116a08a1a8793618fb5269016cfd9b61">deltaT</a>*<a class="el" href="class_solution.html#af647b9b893549259060034672babb0f8">D</a>) / pow(<a class="el" href="class_solution.html#a8e97e5534ddcde31983432b8fb2050ff">deltaX</a>, 2)</td></tr>
 <tr class="separator:a9261b579f612bf4ce6b0d85cbe39bb56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bfc5f53066a6dec716d07d046274669"><td class="memItemLeft" align="right" valign="top"><a id="a9bfc5f53066a6dec716d07d046274669"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>posL</b> = 0</td></tr>
-<tr class="separator:a9bfc5f53066a6dec716d07d046274669"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addfca3dd9aebb1fc71ad049f11a12480"><td class="memItemLeft" align="right" valign="top"><a id="addfca3dd9aebb1fc71ad049f11a12480"></a>
-std::vector&lt; std::vector&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>L</b></td></tr>
-<tr class="separator:addfca3dd9aebb1fc71ad049f11a12480"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee3ebb954e012f6ba5ba4f408a153cd6"><td class="memItemLeft" align="right" valign="top"><a id="aee3ebb954e012f6ba5ba4f408a153cd6"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_laasonen_method.html#aee3ebb954e012f6ba5ba4f408a153cd6">aCoef</a> = -C</td></tr>
+<tr class="memdesc:aee3ebb954e012f6ba5ba4f408a153cd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">the value for the a coefficient is defined when studying the formation of the tridiagonal matrix. <br /></td></tr>
+<tr class="separator:aee3ebb954e012f6ba5ba4f408a153cd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac020d80815f449386c66a16c9c1d4cb"><td class="memItemLeft" align="right" valign="top"><a id="aac020d80815f449386c66a16c9c1d4cb"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_laasonen_method.html#aac020d80815f449386c66a16c9c1d4cb">bCoef</a> = (2 * C + 1)</td></tr>
+<tr class="memdesc:aac020d80815f449386c66a16c9c1d4cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">the value for the b coefficient is defined when studying the formation of the tridiagonal matrix. <br /></td></tr>
+<tr class="separator:aac020d80815f449386c66a16c9c1d4cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20f8fcb3ad8f0befd3abcacc567d28ab"><td class="memItemLeft" align="right" valign="top"><a id="a20f8fcb3ad8f0befd3abcacc567d28ab"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_laasonen_method.html#a20f8fcb3ad8f0befd3abcacc567d28ab">cCoef</a> = -C</td></tr>
+<tr class="memdesc:a20f8fcb3ad8f0befd3abcacc567d28ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">the value for the c coefficient is defined when studying the formation of the tridiagonal matrix. <br /></td></tr>
+<tr class="separator:a20f8fcb3ad8f0befd3abcacc567d28ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_solution"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_solution')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_solution.html">Solution</a></td></tr>
 <tr class="memitem:a8e97e5534ddcde31983432b8fb2050ff inherit pro_attribs_class_solution"><td class="memItemLeft" align="right" valign="top"><a id="a8e97e5534ddcde31983432b8fb2050ff"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#a8e97e5534ddcde31983432b8fb2050ff">deltaX</a> = 0.05</td></tr>
@@ -229,7 +235,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Computes and stores the values for the <a class="el" href="class_solution.html">Solution</a> using this method. </p>
+<p>Computes and stores the values for the <a class="el" href="class_solution.html">Solution</a> using this method.</p>
+<p>Computes and stores the values for the <a class="el" href="class_solution.html">Solution</a> using the Simple Implicit Laasonen method, for this, we will carry out the Thomas Algorithm. </p>
 
 </div>
 </div>

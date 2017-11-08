@@ -7,7 +7,10 @@
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static void \hyperlink{class_output_a97f96caf0cafae93dad6f4faedb1fe25}{print\+Solution} (std\+::vector$<$ std\+::vector$<$ double $>$$>$ v)
+static void \hyperlink{class_output_a79b3b86314e979457e5aac1ff4840605}{print\+Solution} (std\+::vector$<$ std\+::vector$<$ double $>$$>$ sols)
+\item 
+\mbox{\Hypertarget{class_output_a0d39b68ef723d6372f7c17e967a1d29a}\label{class_output_a0d39b68ef723d6372f7c17e967a1d29a}} 
+static void {\bfseries export\+Solution} (\hyperlink{class_solution}{Solution} obj, double x\+Size, std\+::string name)
 \end{DoxyCompactItemize}
 
 
@@ -17,7 +20,7 @@ The \hyperlink{class_output}{Output} class is utilised to export the content ~\n
  results on the console. 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{class_output_a97f96caf0cafae93dad6f4faedb1fe25}\label{class_output_a97f96caf0cafae93dad6f4faedb1fe25}} 
+\mbox{\Hypertarget{class_output_a79b3b86314e979457e5aac1ff4840605}\label{class_output_a79b3b86314e979457e5aac1ff4840605}} 
 \index{Output@{Output}!print\+Solution@{print\+Solution}}
 \index{print\+Solution@{print\+Solution}!Output@{Output}}
 \subsubsection{\texorpdfstring{print\+Solution()}{printSolution()}}
@@ -25,10 +28,15 @@ The \hyperlink{class_output}{Output} class is utilised to export the content ~\n
 
 Prints on console all the solutions stored in a \hyperlink{class_solution}{Solution} object. 
 \begin{DoxyParams}{Parameters}
-{\em v} & This should be the all\+Solutions attribute from the \hyperlink{class_solution}{Solution} object we want to check.\\
+{\em sols} & This should be the all\+Solutions attribute from the \hyperlink{class_solution}{Solution} object we want to print.\\
 \hline
 \end{DoxyParams}
 Print all solutions from a vector of double vectors. 
+\begin{DoxyParams}{Parameters}
+{\em v} & std\+::vector$<$std\+::vector$<$double$>$$>$. \hyperlink{class_vector}{Vector} of double vectors that we want to print. \\
+\hline
+\end{DoxyParams}
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

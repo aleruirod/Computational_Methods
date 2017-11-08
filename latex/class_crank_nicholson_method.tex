@@ -15,7 +15,21 @@ Inheritance diagram for Crank\+Nicholson\+Method\+:\begin{figure}[H]
 \item 
 void \hyperlink{class_crank_nicholson_method_a10558e5238673e11a76b4e10e8c588b4}{compute} ()
 \end{DoxyCompactItemize}
-\subsection*{Additional Inherited Members}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_crank_nicholson_method_a69b00d4201a7e55cd3fc1d28d1fa1dc2}\label{class_crank_nicholson_method_a69b00d4201a7e55cd3fc1d28d1fa1dc2}} 
+double {\bfseries C} = (\hyperlink{class_solution_a116a08a1a8793618fb5269016cfd9b61}{deltaT}$\ast$\hyperlink{class_solution_af647b9b893549259060034672babb0f8}{D}) / pow(\hyperlink{class_solution_a8e97e5534ddcde31983432b8fb2050ff}{deltaX}, 2)
+\item 
+\mbox{\Hypertarget{class_crank_nicholson_method_a1977a47d86e7b30eec5b57600144e23e}\label{class_crank_nicholson_method_a1977a47d86e7b30eec5b57600144e23e}} 
+double \hyperlink{class_crank_nicholson_method_a1977a47d86e7b30eec5b57600144e23e}{a\+Coef} = -\/C/2
+\begin{DoxyCompactList}\small\item\em the value for the a coefficient is defined when studying the formation of the tridiagonal matrix. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_crank_nicholson_method_ad22f33a10cbad33f62347bc2a19a79f7}\label{class_crank_nicholson_method_ad22f33a10cbad33f62347bc2a19a79f7}} 
+double \hyperlink{class_crank_nicholson_method_ad22f33a10cbad33f62347bc2a19a79f7}{b\+Coef} = (1 + C)
+\begin{DoxyCompactList}\small\item\em the value for the b coefficient is defined when studying the formation of the tridiagonal matrix. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_crank_nicholson_method_a34b9d53c9347389c48b7d68b7eefbad7}\label{class_crank_nicholson_method_a34b9d53c9347389c48b7d68b7eefbad7}} 
+double \hyperlink{class_crank_nicholson_method_a34b9d53c9347389c48b7d68b7eefbad7}{c\+Coef} = -\/C/2
+\begin{DoxyCompactList}\small\item\em the value for the c coefficient is defined when studying the formation of the tridiagonal matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -56,7 +70,9 @@ Creates an \hyperlink{class_crank_nicholson_method}{Crank\+Nicholson\+Method} ob
 \subsubsection{\texorpdfstring{compute()}{compute()}}
 {\footnotesize\ttfamily void Crank\+Nicholson\+Method\+::compute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Computes and stores the values for the \hyperlink{class_solution}{Solution} using this method. 
+Computes and stores the values for the \hyperlink{class_solution}{Solution} using this method.
+
+Computes and stores the values for the \hyperlink{class_solution}{Solution} using the Crank Nicholson method, for this, we will carry out the Thomas Algorithm. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['d',['D',['../class_solution.html#af647b9b893549259060034672babb0f8',1,'Solution']]],
-  ['deltat',['deltaT',['../class_solution.html#a116a08a1a8793618fb5269016cfd9b61',1,'Solution']]],
-  ['deltax',['deltaX',['../class_solution.html#a8e97e5534ddcde31983432b8fb2050ff',1,'Solution']]],
-  ['dufortfrankelmethod',['DuFortFrankelMethod',['../class_du_fort_frankel_method.html',1,'DuFortFrankelMethod'],['../class_du_fort_frankel_method.html#ae4f8e7c2d498265fa8b8e6ea0bd74288',1,'DuFortFrankelMethod::DuFortFrankelMethod()'],['../class_du_fort_frankel_method.html#a5914f09f3f3aa00d0ac1d270e73613e2',1,'DuFortFrankelMethod::DuFortFrankelMethod(std::vector&lt; std::vector&lt; double &gt;&gt; sols)']]]
+  ['ccoef',['cCoef',['../class_crank_nicholson_method.html#a34b9d53c9347389c48b7d68b7eefbad7',1,'CrankNicholsonMethod::cCoef()'],['../class_laasonen_method.html#a20f8fcb3ad8f0befd3abcacc567d28ab',1,'LaasonenMethod::cCoef()']]],
+  ['compute',['compute',['../class_analytical_solution.html#ae1ebc556a8dfed55b6c463625545d919',1,'AnalyticalSolution::compute()'],['../class_crank_nicholson_method.html#a10558e5238673e11a76b4e10e8c588b4',1,'CrankNicholsonMethod::compute()'],['../class_du_fort_frankel_method.html#a68b9ad88883a71daba4c2fc92355b173',1,'DuFortFrankelMethod::compute()'],['../class_laasonen_method.html#ac5507d58a6c59f0ba9eaa3ca54a51f5d',1,'LaasonenMethod::compute()'],['../class_richardson_method.html#acefe085864b041381f1a7fd3af46d7fb',1,'RichardsonMethod::compute()']]],
+  ['cranknicholsonmethod',['CrankNicholsonMethod',['../class_crank_nicholson_method.html',1,'CrankNicholsonMethod'],['../class_crank_nicholson_method.html#ae5052444cd3f042a554bb74d9ac556e0',1,'CrankNicholsonMethod::CrankNicholsonMethod()'],['../class_crank_nicholson_method.html#a9738c40cac3d4f37775d6211544b178f',1,'CrankNicholsonMethod::CrankNicholsonMethod(std::vector&lt; std::vector&lt; double &gt;&gt; sols)']]],
+  ['createt0vector',['createT0Vector',['../class_tools.html#a7e58e60636cab3c3454f16cb861792b3',1,'Tools']]]
 ];

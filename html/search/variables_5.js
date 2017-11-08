@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['solution',['solution',['../class_solution.html#ae15c62e099b4ad8a337b62fd05283cd8',1,'Solution']]]
+  ['n',['n',['../class_solution.html#aca95282163f453b465bb1991c596a34e',1,'Solution']]]
 ];

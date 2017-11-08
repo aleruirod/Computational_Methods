@@ -83,6 +83,7 @@ $(document).ready(function(){initNavTree('class_crank_nicholson_method.html','')
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_crank_nicholson_method-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">CrankNicholsonMethod Class Reference</div>  </div>
@@ -113,11 +114,32 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:acd2b9ac1b6ddd327ece034d99fc9cfdd inherit pub_methods_class_solution"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd28abd062adb793866fd5e1c8ef8639 inherit pub_methods_class_solution"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#abd28abd062adb793866fd5e1c8ef8639">getAllSolutions</a> ()</td></tr>
 <tr class="separator:abd28abd062adb793866fd5e1c8ef8639 inherit pub_methods_class_solution"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45756ea0f3bbd5a69e1ddcd12379f398 inherit pub_methods_class_solution"><td class="memItemLeft" align="right" valign="top"><a id="a45756ea0f3bbd5a69e1ddcd12379f398"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>getDeltaX</b> ()</td></tr>
+<tr class="separator:a45756ea0f3bbd5a69e1ddcd12379f398 inherit pub_methods_class_solution"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5e6d31c8b567a20dce17b802242bd02 inherit pub_methods_class_solution"><td class="memItemLeft" align="right" valign="top"><a id="ab5e6d31c8b567a20dce17b802242bd02"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>getDeltaT</b> ()</td></tr>
+<tr class="separator:ab5e6d31c8b567a20dce17b802242bd02 inherit pub_methods_class_solution"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ea58d9480ccb4e344c377f4861e1e7f inherit pub_methods_class_solution"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#a0ea58d9480ccb4e344c377f4861e1e7f">addToAllSolutions</a> (std::vector&lt; double &gt; v)</td></tr>
 <tr class="separator:a0ea58d9480ccb4e344c377f4861e1e7f inherit pub_methods_class_solution"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a69b00d4201a7e55cd3fc1d28d1fa1dc2"><td class="memItemLeft" align="right" valign="top"><a id="a69b00d4201a7e55cd3fc1d28d1fa1dc2"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>C</b> = (<a class="el" href="class_solution.html#a116a08a1a8793618fb5269016cfd9b61">deltaT</a>*<a class="el" href="class_solution.html#af647b9b893549259060034672babb0f8">D</a>) / pow(<a class="el" href="class_solution.html#a8e97e5534ddcde31983432b8fb2050ff">deltaX</a>, 2)</td></tr>
+<tr class="separator:a69b00d4201a7e55cd3fc1d28d1fa1dc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1977a47d86e7b30eec5b57600144e23e"><td class="memItemLeft" align="right" valign="top"><a id="a1977a47d86e7b30eec5b57600144e23e"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_crank_nicholson_method.html#a1977a47d86e7b30eec5b57600144e23e">aCoef</a> = -C/2</td></tr>
+<tr class="memdesc:a1977a47d86e7b30eec5b57600144e23e"><td class="mdescLeft">&#160;</td><td class="mdescRight">the value for the a coefficient is defined when studying the formation of the tridiagonal matrix. <br /></td></tr>
+<tr class="separator:a1977a47d86e7b30eec5b57600144e23e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad22f33a10cbad33f62347bc2a19a79f7"><td class="memItemLeft" align="right" valign="top"><a id="ad22f33a10cbad33f62347bc2a19a79f7"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_crank_nicholson_method.html#ad22f33a10cbad33f62347bc2a19a79f7">bCoef</a> = (1 + C)</td></tr>
+<tr class="memdesc:ad22f33a10cbad33f62347bc2a19a79f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">the value for the b coefficient is defined when studying the formation of the tridiagonal matrix. <br /></td></tr>
+<tr class="separator:ad22f33a10cbad33f62347bc2a19a79f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34b9d53c9347389c48b7d68b7eefbad7"><td class="memItemLeft" align="right" valign="top"><a id="a34b9d53c9347389c48b7d68b7eefbad7"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_crank_nicholson_method.html#a34b9d53c9347389c48b7d68b7eefbad7">cCoef</a> = -C/2</td></tr>
+<tr class="memdesc:a34b9d53c9347389c48b7d68b7eefbad7"><td class="mdescLeft">&#160;</td><td class="mdescRight">the value for the c coefficient is defined when studying the formation of the tridiagonal matrix. <br /></td></tr>
+<tr class="separator:a34b9d53c9347389c48b7d68b7eefbad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_solution"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_solution')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_solution.html">Solution</a></td></tr>
 <tr class="memitem:a8e97e5534ddcde31983432b8fb2050ff inherit pro_attribs_class_solution"><td class="memItemLeft" align="right" valign="top"><a id="a8e97e5534ddcde31983432b8fb2050ff"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#a8e97e5534ddcde31983432b8fb2050ff">deltaX</a> = 0.05</td></tr>
@@ -213,7 +235,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Computes and stores the values for the <a class="el" href="class_solution.html">Solution</a> using this method. </p>
+<p>Computes and stores the values for the <a class="el" href="class_solution.html">Solution</a> using this method.</p>
+<p>Computes and stores the values for the <a class="el" href="class_solution.html">Solution</a> using the Crank Nicholson method, for this, we will carry out the Thomas Algorithm. </p>
 
 </div>
 </div>

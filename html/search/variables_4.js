@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pi',['PI',['../class_analytical_solution.html#a7790fe079a6319530e2d203c5ff64b23',1,'AnalyticalSolution']]]
+  ['l',['L',['../class_solution.html#afa80e5854fb5af93932f445e426c7f66',1,'Solution']]]
 ];

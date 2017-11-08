@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Computational Methods: Class Members - Variables</title>
+<title>Computational Methods: Tools Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,7 +63,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('functions_vars.html','');});
+$(document).ready(function(){initNavTree('class_tools.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -80,50 +80,74 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 </iframe>
 </div>
 
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="class_tools-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Tools Class Reference</div>  </div>
+</div><!--header-->
 <div class="contents">
-&#160;<ul>
-<li>aCoef
-: <a class="el" href="class_crank_nicholson_method.html#a1977a47d86e7b30eec5b57600144e23e">CrankNicholsonMethod</a>
-, <a class="el" href="class_laasonen_method.html#aee3ebb954e012f6ba5ba4f408a153cd6">LaasonenMethod</a>
-</li>
-<li>allSolPos
-: <a class="el" href="class_solution.html#af933662f6d08824b37f315fc36678c3b">Solution</a>
-</li>
-<li>allSolutions
-: <a class="el" href="class_solution.html#a09fa8d2538a87e8d9cba2ee682f729ac">Solution</a>
-</li>
-<li>bCoef
-: <a class="el" href="class_crank_nicholson_method.html#ad22f33a10cbad33f62347bc2a19a79f7">CrankNicholsonMethod</a>
-, <a class="el" href="class_laasonen_method.html#aac020d80815f449386c66a16c9c1d4cb">LaasonenMethod</a>
-</li>
-<li>cCoef
-: <a class="el" href="class_crank_nicholson_method.html#a34b9d53c9347389c48b7d68b7eefbad7">CrankNicholsonMethod</a>
-, <a class="el" href="class_laasonen_method.html#a20f8fcb3ad8f0befd3abcacc567d28ab">LaasonenMethod</a>
-</li>
-<li>D
-: <a class="el" href="class_solution.html#af647b9b893549259060034672babb0f8">Solution</a>
-</li>
-<li>deltaT
-: <a class="el" href="class_solution.html#a116a08a1a8793618fb5269016cfd9b61">Solution</a>
-</li>
-<li>deltaX
-: <a class="el" href="class_solution.html#a8e97e5534ddcde31983432b8fb2050ff">Solution</a>
-</li>
-<li>L
-: <a class="el" href="class_solution.html#afa80e5854fb5af93932f445e426c7f66">Solution</a>
-</li>
-<li>n
-: <a class="el" href="class_solution.html#aca95282163f453b465bb1991c596a34e">Solution</a>
-</li>
-<li>PI
-: <a class="el" href="class_analytical_solution.html#a7790fe079a6319530e2d203c5ff64b23">AnalyticalSolution</a>
-</li>
+
+<p><code>#include &lt;<a class="el" href="_tools_8h_source.html">Tools.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a7e58e60636cab3c3454f16cb861792b3"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tools.html#a7e58e60636cab3c3454f16cb861792b3">createT0Vector</a> (int n)</td></tr>
+<tr class="separator:a7e58e60636cab3c3454f16cb861792b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="class_tools.html">Tools</a> class contains functions to support the computation <br />
+ and processing of results. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7e58e60636cab3c3454f16cb861792b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e58e60636cab3c3454f16cb861792b3">&#9670;&nbsp;</a></span>createT0Vector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; double &gt; Tools::createT0Vector </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a vector following the boundary conditions of the problem. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>Length of the vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>int. Length of the vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li><a class="el" href="_tools_8h_source.html">Tools.h</a></li>
+<li>Tools.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="class_tools.html">Tools</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>

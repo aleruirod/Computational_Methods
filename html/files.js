@@ -7,5 +7,6 @@ var files =
     [ "Output.h", "_output_8h_source.html", null ],
     [ "RichardsonMethod.h", "_richardson_method_8h_source.html", null ],
     [ "Solution.h", "_solution_8h_source.html", null ],
+    [ "Tools.h", "_tools_8h_source.html", null ],
     [ "vector.h", "vector_8h_source.html", null ]
 ];
