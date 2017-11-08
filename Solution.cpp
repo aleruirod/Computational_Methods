@@ -32,6 +32,16 @@ double Solution::getDeltaT() {
 	return deltaT;
 }
 
+//SETTERS
+
+void Solution::setDeltaX(double x) {
+	deltaX = x;
+}
+
+void Solution::setDeltaT(double t) {
+	deltaT = t;
+}
+
 //STORING
 /**
 * adds a new solution to allSolutions.

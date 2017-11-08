@@ -19,8 +19,5 @@ public:
 
 	static std::vector<double> createT0Vector(int n /**int. Length of the vector. */);
 
-
-
-
 };
 #endif

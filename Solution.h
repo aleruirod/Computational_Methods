@@ -38,16 +38,44 @@ public:
 
 	std::vector<std::vector<double>> getAllSolutions();
 
+	/**
+	* Returns the current value for deltaX.
+	* @see getDeltaT();
+	*/
+
 	double getDeltaX();
 
+	/**
+	* Returns the current value for deltaT.
+	* @see getDeltaX();
+	*/
+
 	double getDeltaT();
+
+	// SETTERS
+	/**
+	* adds a new solution to allSolutions.
+	* @see setDeltaT();
+	* @param x new value for deltaX.
+	*/
+
+	void setDeltaX(double x /**double. new value for deltaX. */);
+
+	/**
+	* adds a new solution to allSolutions.
+	* @see setDeltaX();
+	* @param t new value for deltaT.
+	*/
+
+	void setDeltaT(double t /**double. new value for deltaT. */);
 
 	// STORING
 	/**
 	* adds a new solution to allSolutions.
+	* @param v double Vector to be added to allSolutions.
 	*/
 
-	void addToAllSolutions(std::vector<double> v);
+	void addToAllSolutions(std::vector<double> v /**std::vector<double>. double Vector to be added to allSolutions. */);
 
 protected:
 	double deltaX = 0.05; //!< Space step. Can be changed for different problems.

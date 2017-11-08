@@ -31,7 +31,7 @@ void RichardsonMethod::compute() {
 									 // because (D*deltaT)/deltaX^2 = 0.4 (which is <= 0.5 which is the limit for stability)
 
 
-	for (int i = 0; i < t1Sol.size(); i++) {
+	for (size_t i = 0; i < t1Sol.size(); i++) {
 		if (i == 0 || i == n)
 			t1Sol[i] = 300.0;//as always, first and last values are 300.0.
 		else
@@ -44,14 +44,14 @@ void RichardsonMethod::compute() {
 	std::vector<double> prevSol1 = t1Sol;// we need to keep track of the solutions for the two previous timesteps in order to satisfy the algorithm.
 	std::vector<double> prevSol2 = t0Sol;
 
-	for (int j = 1; j < 51; j++) { // we choose 51 as the limit of the loop as we need at least 50 timesteps to get to t = 0.5.
+	for (int j = 1; j < (0.5 / deltaT) + 1; j++) {// the limit for this loop is the number of timesteps needed to get to t = 0.5.
 
-		for (int i = 1; i < compSol.size() - 1; i++) {
+		for (size_t i = 1; i < compSol.size() - 1; i++) {
 
 			compSol[i] = ((2 * deltaT*D*((prevSol1[i + 1] - 2 * prevSol1[i] + prevSol1[i - 1]) / pow(deltaX, 2))) + prevSol2[i]);
 			
 		}
-		if ((j % 10) == 0)// We store the values for t = 0.1, 0.2,...,0.5 (every 10 timesteps).
+		if ((j % (int)(0.1 / deltaT)) == 0)// We store the values for t = 0.1, 0.2,...,0.5.
 			addToAllSolutions(compSol);
 
 		prevSol2 = prevSol1;

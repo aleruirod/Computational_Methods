@@ -30,7 +30,7 @@ void CrankNicholsonMethod::compute() {
 	std::vector<double> cStar(n - 1);// These are the c* and d* vectors used during the forward and backward substitution phases of the algorithm.
 	std::vector<double> dStar(n - 1);
 
-	for (int j = 1; j < 51; j++) { // we set the limit of the number of timestep calculations to 51 as we need to reach t = 0.5 (50 timesteps).
+	for (int j = 1; j < (0.5 / deltaT) + 1; j++) { // the limit for this loop is the number of timesteps needed to get to t = 0.5.
 
 		for (int i = 0; i < n - 1; i++) {
 
@@ -64,7 +64,7 @@ void CrankNicholsonMethod::compute() {
 				x[k] = dStar[k - 1] - cStar[k - 1] * x[k + 1];
 		}
 
-		if ((j % 10) == 0) // We store the values for t = 0.1, 0.2,...,0.5 (every 10 timesteps).
+		if ((j % (int)(0.1 / deltaT)) == 0) // We store the values for t = 0.1, 0.2,...,0.5.
 			addToAllSolutions(x);
 
 		previousX = x;

@@ -28,10 +28,10 @@ void AnalyticalSolution::compute() {
 
 	std::vector<double> anSol = Tools::createT0Vector(n + 1);
 
-	for (int j = 1; j < 51; j++) { // we choose 51 as the limit of the loop as we need at least 50 timesteps to get to t = 0.5.
+	for (int j = 1; j < (0.5 / deltaT) + 1; j++) {// the limit for this loop is the number of timesteps needed to get to t = 0.5.
 
 		
-		for (int i = 1; i < anSol.size() - 1; i++) {
+		for (size_t i = 1; i < anSol.size() - 1; i++) {
 			double sum = 0.0;
 			for (int m = 1; m < 1000; m++) // we need the sum of a big number of elements in order to have a good result so a 1000 will probably be enough.
 			{
@@ -39,7 +39,7 @@ void AnalyticalSolution::compute() {
 			}
 			anSol[i] = 300 + 2 * (100 - 300) * sum; // we use the sum previously calculated so we can compute the complete analytical solution.
 		}
-		if ((j % 10) == 0) // We store the values for t = 0.1, 0.2,...,0.5 (every 10 timesteps).
+		if ((j % (int)(0.1 / deltaT)) == 0) // We store the values for t = 0.1, 0.2,...,0.5.
 			addToAllSolutions(anSol);
 	}
 } 

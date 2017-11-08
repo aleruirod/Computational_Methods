@@ -10,9 +10,9 @@
 
 void Output::printSolution(std::vector<std::vector<double>> v) {
 
-	for (int i = 0; i < v.size(); i++)
+	for (size_t i = 0; i < v.size(); i++)
 	{
-		for (int j = 0; j < v[i].size(); j++)
+		for (size_t j = 0; j < v[i].size(); j++)
 		{
 			std::cout << v[i][j] << " "; // for every value in a timestep, we introduce a blank space as separation.
 		}
@@ -20,17 +20,21 @@ void Output::printSolution(std::vector<std::vector<double>> v) {
 	}
 }
 
-void Output::exportSolution(Solution obj, double xSize, std::string name) {
+/**
+* Exports all results stored in a Solution object.
+*/
 
-	for (int i = 0; i < obj.getAllSolutions().size(); i++) {
+void Output::exportSolution(Solution sol, double tSize, std::string name) {
+
+	for (size_t i = 0; i < sol.getAllSolutions().size(); i++) {
 
 		std::string aux = name;
-		aux += std::to_string(xSize*i)+".dat";
+		aux += std::to_string(tSize*i)+".dat";
 
 		std::ofstream outfile(aux);
 
-		for (int j = 0; j < obj.getAllSolutions()[0].size(); j++)
-			outfile << obj.getDeltaX()*j << " " << obj.getAllSolutions()[i][j] << "\n" << std::endl;
+		for (size_t j = 0; j < sol.getAllSolutions()[0].size(); j++)
+			outfile << sol.getDeltaX()*j << " " << sol.getAllSolutions()[i][j] << "\n" << std::endl;
 			
 		outfile.close();
 

@@ -31,7 +31,7 @@ void DuFortFrankelMethod::compute() {
 
 	addToAllSolutions(t0Sol);// we need to store the values for t = 0.0.
 
-	for (int i = 0; i < t1Sol.size(); i++) {
+	for (size_t i = 0; i < (t1Sol.size()); i++) {
 		if (i == 0 || i == n)
 			t1Sol[i] = 300.0; //as always, first and last values are 300.0.
 		else
@@ -45,9 +45,9 @@ void DuFortFrankelMethod::compute() {
 	std::vector<double> prevSol1 = t1Sol;
 	std::vector<double> prevSol2 = t0Sol;
 
-	for (int j = 1; j < 51; j++) { // we choose 51 as the limit of the loop as we need at least 50 timesteps to get to t = 0.5.
+	for (int j = 1; j < (0.5 / deltaT) + 1; j++) { // the limit for this loop is the number of timesteps needed to get to t = 0.5.
 		
-		for (int i = 1; i < compSol.size() - 1; i++) {
+		for (size_t i = 1; i < (compSol.size() - 1); i++) {
 
 			compSol[i] = ((1 - ((2 * D*deltaT) / (pow(deltaX, 2)))) * prevSol2[i]
 				+ (((2 * D*deltaT) / (pow(deltaX, 2))) * (prevSol1[i + 1] + prevSol1[i - 1])))
@@ -55,7 +55,7 @@ void DuFortFrankelMethod::compute() {
 
 		}
 
-		if ((j % 10) == 0) // We store the values for t = 0.1, 0.2,...,0.5 (every 10 timesteps).
+		if ((j % (int)(0.1 / deltaT)) == 0) // We store the values for t = 0.1, 0.2,...,0.5.
 			addToAllSolutions(compSol);
 
 		prevSol2 = prevSol1;

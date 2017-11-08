@@ -23,7 +23,16 @@ class Output {
 
 		static void printSolution(std::vector<std::vector<double>> sols /**< std::vector<std::vector<double>>. Vector of double vectors that we want to print. */);
 
-		static void exportSolution(Solution obj, double xSize, std::string name);
+		/**
+		* Exports the Solution in several .dat files.
+		* @param sol this is the Solution we want to export the results from.
+		* @param tSize this is the time difference between the different timesteps our solution has.
+		* @param name this is the base name for the method used to get the solution we want to export.
+		*/
+
+		static void exportSolution(Solution sol /**Solution. this is the Solution we want to export the results from. */, 
+			double tSize /**double. this is the time difference between the different timesteps our solution has. */,
+			std::string name /**std::string. this is the base name for the method used to get the solution we want to export. */);
 
 };
 #endif
