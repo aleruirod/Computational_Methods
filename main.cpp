@@ -5,6 +5,7 @@
 #include "CrankNicholsonMethod.h"
 #include "AnalyticalSolution.h"
 #include "Output.h"
+#include "Tools.h"
 
 
 int main() {
@@ -74,5 +75,37 @@ int main() {
 	laasonenSol1.compute();
 	Output::printSolution(laasonenSol1.getAllSolutions());
 	//Output::exportSolution(laasonenSol1, 0.1, "Simple Laasonen Method deltaT = 0.1_");
+
+	std::cout << "\n";
+	std::cout << "TWO NORM VALUES:\n";
+
+	std::cout << "\n";
+	std::cout << "Du Fort Frankel \n";
+
+	std::vector<double> dufort = Tools::twoNorm(analyt, duFortFrankelSol);
+
+	Output::printVector(dufort);
+
+	std::cout << "\n";
+	std::cout << "Richardson \n";
+
+	std::vector<double> rich = Tools::twoNorm(analyt, richardsonSol);
+
+	Output::printVector(rich);
+
+	std::cout << "\n";
+	std::cout << "Simple Laasonen \n";
+
+	std::vector<double> las = Tools::twoNorm(analyt, laasonenSol01);
+
+	Output::printVector(las);
+
+	std::cout << "\n";
+	std::cout << "Crank Nicholson \n";
+
+	std::vector<double> crank = Tools::twoNorm(analyt, crankNicholsonSol);
+
+	Output::printVector(crank);
+
 
 }

@@ -1,6 +1,5 @@
 #include <iostream>
 #include <fstream> 
-#include <math.h>
 
 #include "Output.h"
 
@@ -39,5 +38,16 @@ void Output::exportSolution(Solution sol, double tSize, std::string name) {
 		outfile.close();
 
 	}
+
+}
+
+/**
+* Prints a concrete vector on screen.
+*/
+
+void Output::printVector(std::vector<double> v) {
+
+	for (size_t i = 0; i < v.size(); i++)
+		std::cout << v[i] << "\n";
 
 }

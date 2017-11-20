@@ -1,4 +1,5 @@
 #include "Solution.h"
+#include "Tools.h"
 
 // CONSTRUCTORS
 /*
@@ -24,19 +25,34 @@ std::vector<std::vector<double>> Solution::getAllSolutions() {
 	return Solution::allSolutions;
 }
 
+/**
+* Returns the value of deltaX for the current solution.
+*/
+
 double Solution::getDeltaX() {
 	return deltaX;
 }
+
+/**
+* Returns the value of deltaT for the current solution.
+*/
 
 double Solution::getDeltaT() {
 	return deltaT;
 }
 
 //SETTERS
+/**
+* Changes the value of deltaX for the current solution.
+*/
 
 void Solution::setDeltaX(double x) {
 	deltaX = x;
 }
+
+/**
+* Changes the value of deltaT for the current solution.
+*/
 
 void Solution::setDeltaT(double t) {
 	deltaT = t;

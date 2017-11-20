@@ -1,7 +1,6 @@
 #ifndef SOLUTION_H
 #define SOLUTION_H
 #include <vector> // we will use the standard vector library provided by the C++ language.
-#include "Tools.h"
 
 
 /**

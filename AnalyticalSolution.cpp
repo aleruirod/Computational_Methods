@@ -1,4 +1,6 @@
 #include "AnalyticalSolution.h"
+#include "Tools.h"
+
 
 // CONSTRUCTORS
 /*

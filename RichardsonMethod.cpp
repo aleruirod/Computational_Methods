@@ -1,4 +1,6 @@
 #include "RichardsonMethod.h"
+#include "Tools.h"
+
 
 // CONSTRUCTORS
 /*

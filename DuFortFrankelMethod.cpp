@@ -1,4 +1,6 @@
 #include "DuFortFrankelMethod.h"
+#include "Tools.h"
+
 #include <iostream>
 
 // CONSTRUCTORS

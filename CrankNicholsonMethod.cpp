@@ -1,4 +1,6 @@
 #include "CrankNicholsonMethod.h"
+#include "Tools.h"
+
 
 // CONSTRUCTORS
 /*

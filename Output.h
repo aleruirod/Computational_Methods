@@ -34,5 +34,12 @@ class Output {
 			double tSize /**double. this is the time difference between the different timesteps our solution has. */,
 			std::string name /**std::string. this is the base name for the method used to get the solution we want to export. */);
 
+		/**
+		* Prints a vector's contents on console.
+		* @param v this is the vector we want to print.
+		*/
+
+		static void printVector(std::vector<double> v /**std::vector<double>. Vector we want to print on screen. */);
+
 };
 #endif
