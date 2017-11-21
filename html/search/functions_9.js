@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['two_5fnorm',['two_norm',['../class_vector.html#a4f501290a50d057bb6c57ea64d7e70a4',1,'Vector']]]
+  ['twonorm',['twoNorm',['../class_tools.html#a5ba9a57b8d07dbca30577f3a5cd6d98f',1,'Tools']]]
 ];

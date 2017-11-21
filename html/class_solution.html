@@ -113,12 +113,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:acd2b9ac1b6ddd327ece034d99fc9cfdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd28abd062adb793866fd5e1c8ef8639"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#abd28abd062adb793866fd5e1c8ef8639">getAllSolutions</a> ()</td></tr>
 <tr class="separator:abd28abd062adb793866fd5e1c8ef8639"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45756ea0f3bbd5a69e1ddcd12379f398"><td class="memItemLeft" align="right" valign="top"><a id="a45756ea0f3bbd5a69e1ddcd12379f398"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>getDeltaX</b> ()</td></tr>
+<tr class="memitem:a45756ea0f3bbd5a69e1ddcd12379f398"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#a45756ea0f3bbd5a69e1ddcd12379f398">getDeltaX</a> ()</td></tr>
 <tr class="separator:a45756ea0f3bbd5a69e1ddcd12379f398"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5e6d31c8b567a20dce17b802242bd02"><td class="memItemLeft" align="right" valign="top"><a id="ab5e6d31c8b567a20dce17b802242bd02"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>getDeltaT</b> ()</td></tr>
+<tr class="memitem:ab5e6d31c8b567a20dce17b802242bd02"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#ab5e6d31c8b567a20dce17b802242bd02">getDeltaT</a> ()</td></tr>
 <tr class="separator:ab5e6d31c8b567a20dce17b802242bd02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e651029193eddea478a8f9d68e74355"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#a0e651029193eddea478a8f9d68e74355">setDeltaX</a> (double x)</td></tr>
+<tr class="separator:a0e651029193eddea478a8f9d68e74355"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af301d534e2214c1004837350d32569a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#af301d534e2214c1004837350d32569a7">setDeltaT</a> (double t)</td></tr>
+<tr class="separator:af301d534e2214c1004837350d32569a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ea58d9480ccb4e344c377f4861e1e7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solution.html#a0ea58d9480ccb4e344c377f4861e1e7f">addToAllSolutions</a> (std::vector&lt; double &gt; v)</td></tr>
 <tr class="separator:a0ea58d9480ccb4e344c377f4861e1e7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -194,13 +196,13 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <p>creates a <a class="el" href="class_solution.html">Solution</a> object from a vector of double vectors. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="class_solution.html#ab55bd4b023d596ce11aaf737b9a6123b">Solution()</a>; </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">sols</td><td><a class="el" href="class_vector.html">Vector</a> of double vectors that the new <a class="el" href="class_solution.html">Solution</a> will use. </td></tr>
+    <tr><td class="paramname">sols</td><td>Vector of double vectors that the new <a class="el" href="class_solution.html">Solution</a> will use. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">sols</td><td>std::vector&lt;std::vector&lt;double&gt;&gt;. <a class="el" href="class_vector.html">Vector</a> of double vectors that the new <a class="el" href="class_solution.html">Solution</a> will use. </td></tr>
+    <tr><td class="paramname">sols</td><td>std::vector&lt;std::vector&lt;double&gt;&gt;. Vector of double vectors that the new <a class="el" href="class_solution.html">Solution</a> will use. </td></tr>
   </table>
   </dd>
 </dl>
@@ -223,7 +225,19 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
         </tr>
       </table>
 </div><div class="memdoc">
+<p>adds a new solution to allSolutions. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>double Vector to be added to allSolutions.</td></tr>
+  </table>
+  </dd>
+</dl>
 <p>adds a new solution to allSolutions. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>std::vector&lt;double&gt;. double Vector to be added to allSolutions. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -243,6 +257,108 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 </div><div class="memdoc">
 <p>Returns all solutions stored in the <a class="el" href="class_solution.html">Solution</a> object.</p>
 <p>Returns all solutions stored in a <a class="el" href="class_solution.html">Solution</a> object </p>
+
+</div>
+</div>
+<a id="ab5e6d31c8b567a20dce17b802242bd02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5e6d31c8b567a20dce17b802242bd02">&#9670;&nbsp;</a></span>getDeltaT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Solution::getDeltaT </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the current value for deltaT. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="class_solution.html#a45756ea0f3bbd5a69e1ddcd12379f398">getDeltaX()</a>;</dd></dl>
+<p>Returns the value of deltaT for the current solution. </p>
+
+</div>
+</div>
+<a id="a45756ea0f3bbd5a69e1ddcd12379f398"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45756ea0f3bbd5a69e1ddcd12379f398">&#9670;&nbsp;</a></span>getDeltaX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Solution::getDeltaX </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the current value for deltaX. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="class_solution.html#ab5e6d31c8b567a20dce17b802242bd02">getDeltaT()</a>;</dd></dl>
+<p>Returns the value of deltaX for the current solution. </p>
+
+</div>
+</div>
+<a id="af301d534e2214c1004837350d32569a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af301d534e2214c1004837350d32569a7">&#9670;&nbsp;</a></span>setDeltaT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Solution::setDeltaT </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>adds a new solution to allSolutions. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="class_solution.html#a0e651029193eddea478a8f9d68e74355">setDeltaX()</a>; </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t</td><td>new value for deltaT.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Changes the value of deltaT for the current solution. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t</td><td>double. new value for deltaT. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0e651029193eddea478a8f9d68e74355"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e651029193eddea478a8f9d68e74355">&#9670;&nbsp;</a></span>setDeltaX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Solution::setDeltaX </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>adds a new solution to allSolutions. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="class_solution.html#af301d534e2214c1004837350d32569a7">setDeltaT()</a>; </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>new value for deltaX.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Changes the value of deltaX for the current solution. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>double. new value for deltaX. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

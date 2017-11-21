@@ -1,5 +1,9 @@
 #include "Tools.h"
 
+/**
+* Creates a vector at t = 0.
+*/
+
 std::vector<double> Tools::createT0Vector(int n) {
 
 	std::vector<double> t0Vec(n, 100.0);
@@ -10,6 +14,10 @@ std::vector<double> Tools::createT0Vector(int n) {
 	return t0Vec;
 
 }
+
+/**
+* Applies the two norm on two solutions to see how they differ. One of them usually being the Analytical Solution.
+*/
 
 std::vector<double> Tools::twoNorm(Solution analytSol, Solution sol) {
 
@@ -27,6 +35,7 @@ std::vector<double> Tools::twoNorm(Solution analytSol, Solution sol) {
 
 		for (size_t j = 0; j < analyticalSoln.size(); j++) {
 
+			//we add the square of the differences between each value of the analytical solution and the one we are comparing.
 			sum += (solutionToCompare[j] - analyticalSoln[j]) * (solutionToCompare[j] - analyticalSoln[j]);
 		}
 

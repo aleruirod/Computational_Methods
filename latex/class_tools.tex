@@ -8,6 +8,8 @@
 \begin{DoxyCompactItemize}
 \item 
 static std\+::vector$<$ double $>$ \hyperlink{class_tools_a7e58e60636cab3c3454f16cb861792b3}{create\+T0\+Vector} (int n)
+\item 
+static std\+::vector$<$ double $>$ \hyperlink{class_tools_a5ba9a57b8d07dbca30577f3a5cd6d98f}{two\+Norm} (\hyperlink{class_solution}{Solution} analyt\+Sol, \hyperlink{class_solution}{Solution} sol)
 \end{DoxyCompactItemize}
 
 
@@ -30,6 +32,26 @@ Creates a vector following the boundary conditions of the problem.
 
 \begin{DoxyParams}{Parameters}
 {\em n} & int. Length of the vector. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tools_a5ba9a57b8d07dbca30577f3a5cd6d98f}\label{class_tools_a5ba9a57b8d07dbca30577f3a5cd6d98f}} 
+\index{Tools@{Tools}!two\+Norm@{two\+Norm}}
+\index{two\+Norm@{two\+Norm}!Tools@{Tools}}
+\subsubsection{\texorpdfstring{two\+Norm()}{twoNorm()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Tools\+::two\+Norm (\begin{DoxyParamCaption}\item[{\hyperlink{class_solution}{Solution}}]{analyt\+Sol,  }\item[{\hyperlink{class_solution}{Solution}}]{sol }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Calculates the two norm for the difference between a certain \hyperlink{class_solution}{Solution} and the Analytical \hyperlink{class_solution}{Solution}. 
+\begin{DoxyParams}{Parameters}
+{\em analyt\+Sol} & Analytical \hyperlink{class_solution}{Solution}. \\
+\hline
+{\em sol} & \hyperlink{class_solution}{Solution} object we want to compare. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyParams}{Parameters}
+{\em analyt\+Sol} & \hyperlink{class_solution}{Solution}. Analytical \hyperlink{class_solution}{Solution} \\
+\hline
+{\em sol} & \hyperlink{class_solution}{Solution}. \hyperlink{class_solution}{Solution} object we want to compare with the Analytical \hyperlink{class_solution}{Solution}. \\
 \hline
 \end{DoxyParams}
 

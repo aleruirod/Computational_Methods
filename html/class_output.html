@@ -95,15 +95,75 @@ $(document).ready(function(){initNavTree('class_output.html','');});
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a79b3b86314e979457e5aac1ff4840605"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_output.html#a79b3b86314e979457e5aac1ff4840605">printSolution</a> (std::vector&lt; std::vector&lt; double &gt;&gt; sols)</td></tr>
 <tr class="separator:a79b3b86314e979457e5aac1ff4840605"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d39b68ef723d6372f7c17e967a1d29a"><td class="memItemLeft" align="right" valign="top"><a id="a0d39b68ef723d6372f7c17e967a1d29a"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>exportSolution</b> (<a class="el" href="class_solution.html">Solution</a> obj, double xSize, std::string name)</td></tr>
-<tr class="separator:a0d39b68ef723d6372f7c17e967a1d29a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bbefa0db72e03bed0d48c0277126aab"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_output.html#a4bbefa0db72e03bed0d48c0277126aab">exportSolution</a> (<a class="el" href="class_solution.html">Solution</a> sol, double tSize, std::string name)</td></tr>
+<tr class="separator:a4bbefa0db72e03bed0d48c0277126aab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71ceb48aa64ba420138bc3be536a457d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_output.html#a71ceb48aa64ba420138bc3be536a457d">printVector</a> (std::vector&lt; double &gt; v)</td></tr>
+<tr class="separator:a71ceb48aa64ba420138bc3be536a457d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="class_output.html">Output</a> class is utilised to export the content <br />
  of the solutions as files or simply show the <br />
  results on the console. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4bbefa0db72e03bed0d48c0277126aab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bbefa0db72e03bed0d48c0277126aab">&#9670;&nbsp;</a></span>exportSolution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Output::exportSolution </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_solution.html">Solution</a>&#160;</td>
+          <td class="paramname"><em>sol</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Exports the <a class="el" href="class_solution.html">Solution</a> in several .dat files. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sol</td><td>this is the <a class="el" href="class_solution.html">Solution</a> we want to export the results from. </td></tr>
+    <tr><td class="paramname">tSize</td><td>this is the time difference between the different timesteps our solution has. </td></tr>
+    <tr><td class="paramname">name</td><td>this is the base name for the method used to get the solution we want to export.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Exports all results stored in a <a class="el" href="class_solution.html">Solution</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sol</td><td><a class="el" href="class_solution.html">Solution</a>. this is the <a class="el" href="class_solution.html">Solution</a> we want to export the results from. </td></tr>
+    <tr><td class="paramname">tSize</td><td>double. this is the time difference between the different timesteps our solution has. </td></tr>
+    <tr><td class="paramname">name</td><td>std::string. this is the base name for the method used to get the solution we want to export. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a79b3b86314e979457e5aac1ff4840605"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a79b3b86314e979457e5aac1ff4840605">&#9670;&nbsp;</a></span>printSolution()</h2>
 
@@ -136,7 +196,46 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>exportSolution
 <p>Print all solutions from a vector of double vectors. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">v</td><td>std::vector&lt;std::vector&lt;double&gt;&gt;. <a class="el" href="class_vector.html">Vector</a> of double vectors that we want to print. </td></tr>
+    <tr><td class="paramname">v</td><td>std::vector&lt;std::vector&lt;double&gt;&gt;. Vector of double vectors that we want to print. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a71ceb48aa64ba420138bc3be536a457d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71ceb48aa64ba420138bc3be536a457d">&#9670;&nbsp;</a></span>printVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Output::printVector </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; double &gt;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Prints a vector's contents on console. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>this is the vector we want to print.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Prints a concrete vector on screen. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>std::vector&lt;double&gt;. Vector we want to print on screen. </td></tr>
   </table>
   </dd>
 </dl>

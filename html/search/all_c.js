@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['uniform_5fnorm',['uniform_norm',['../class_vector.html#a50b72131eaf3698a9876d99ab6912a32',1,'Vector']]]
+  ['tools',['Tools',['../class_tools.html',1,'']]],
+  ['twonorm',['twoNorm',['../class_tools.html#a5ba9a57b8d07dbca30577f3a5cd6d98f',1,'Tools']]]
 ];

@@ -8,8 +8,5 @@ var hierarchy =
       [ "LaasonenMethod", "class_laasonen_method.html", null ],
       [ "RichardsonMethod", "class_richardson_method.html", null ]
     ] ],
-    [ "Tools", "class_tools.html", null ],
-    [ "vector", null, [
-      [ "Vector", "class_vector.html", null ]
-    ] ]
+    [ "Tools", "class_tools.html", null ]
 ];

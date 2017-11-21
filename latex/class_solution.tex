@@ -19,11 +19,13 @@ Inheritance diagram for Solution\+:\begin{figure}[H]
 \item 
 std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \hyperlink{class_solution_abd28abd062adb793866fd5e1c8ef8639}{get\+All\+Solutions} ()
 \item 
-\mbox{\Hypertarget{class_solution_a45756ea0f3bbd5a69e1ddcd12379f398}\label{class_solution_a45756ea0f3bbd5a69e1ddcd12379f398}} 
-double {\bfseries get\+DeltaX} ()
+double \hyperlink{class_solution_a45756ea0f3bbd5a69e1ddcd12379f398}{get\+DeltaX} ()
 \item 
-\mbox{\Hypertarget{class_solution_ab5e6d31c8b567a20dce17b802242bd02}\label{class_solution_ab5e6d31c8b567a20dce17b802242bd02}} 
-double {\bfseries get\+DeltaT} ()
+double \hyperlink{class_solution_ab5e6d31c8b567a20dce17b802242bd02}{get\+DeltaT} ()
+\item 
+void \hyperlink{class_solution_a0e651029193eddea478a8f9d68e74355}{set\+DeltaX} (double x)
+\item 
+void \hyperlink{class_solution_af301d534e2214c1004837350d32569a7}{set\+DeltaT} (double t)
 \item 
 void \hyperlink{class_solution_a0ea58d9480ccb4e344c377f4861e1e7f}{add\+To\+All\+Solutions} (std\+::vector$<$ double $>$ v)
 \end{DoxyCompactItemize}
@@ -79,12 +81,12 @@ creates a \hyperlink{class_solution}{Solution} object from a vector of double ve
 \end{DoxySeeAlso}
 
 \begin{DoxyParams}{Parameters}
-{\em sols} & \hyperlink{class_vector}{Vector} of double vectors that the new \hyperlink{class_solution}{Solution} will use. \\
+{\em sols} & Vector of double vectors that the new \hyperlink{class_solution}{Solution} will use. \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyParams}{Parameters}
-{\em sols} & std\+::vector$<$std\+::vector$<$double$>$$>$. \hyperlink{class_vector}{Vector} of double vectors that the new \hyperlink{class_solution}{Solution} will use. \\
+{\em sols} & std\+::vector$<$std\+::vector$<$double$>$$>$. Vector of double vectors that the new \hyperlink{class_solution}{Solution} will use. \\
 \hline
 \end{DoxyParams}
 
@@ -96,7 +98,17 @@ creates a \hyperlink{class_solution}{Solution} object from a vector of double ve
 \subsubsection{\texorpdfstring{add\+To\+All\+Solutions()}{addToAllSolutions()}}
 {\footnotesize\ttfamily void Solution\+::add\+To\+All\+Solutions (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{v }\end{DoxyParamCaption})}
 
-adds a new solution to all\+Solutions. \mbox{\Hypertarget{class_solution_abd28abd062adb793866fd5e1c8ef8639}\label{class_solution_abd28abd062adb793866fd5e1c8ef8639}} 
+adds a new solution to all\+Solutions. 
+\begin{DoxyParams}{Parameters}
+{\em v} & double Vector to be added to all\+Solutions.\\
+\hline
+\end{DoxyParams}
+adds a new solution to all\+Solutions. 
+\begin{DoxyParams}{Parameters}
+{\em v} & std\+::vector$<$double$>$. double Vector to be added to all\+Solutions. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_solution_abd28abd062adb793866fd5e1c8ef8639}\label{class_solution_abd28abd062adb793866fd5e1c8ef8639}} 
 \index{Solution@{Solution}!get\+All\+Solutions@{get\+All\+Solutions}}
 \index{get\+All\+Solutions@{get\+All\+Solutions}!Solution@{Solution}}
 \subsubsection{\texorpdfstring{get\+All\+Solutions()}{getAllSolutions()}}
@@ -104,7 +116,63 @@ adds a new solution to all\+Solutions. \mbox{\Hypertarget{class_solution_abd28ab
 
 Returns all solutions stored in the \hyperlink{class_solution}{Solution} object.
 
-Returns all solutions stored in a \hyperlink{class_solution}{Solution} object 
+Returns all solutions stored in a \hyperlink{class_solution}{Solution} object \mbox{\Hypertarget{class_solution_ab5e6d31c8b567a20dce17b802242bd02}\label{class_solution_ab5e6d31c8b567a20dce17b802242bd02}} 
+\index{Solution@{Solution}!get\+DeltaT@{get\+DeltaT}}
+\index{get\+DeltaT@{get\+DeltaT}!Solution@{Solution}}
+\subsubsection{\texorpdfstring{get\+Delta\+T()}{getDeltaT()}}
+{\footnotesize\ttfamily double Solution\+::get\+DeltaT (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the current value for deltaT. \begin{DoxySeeAlso}{See also}
+\hyperlink{class_solution_a45756ea0f3bbd5a69e1ddcd12379f398}{get\+Delta\+X()};
+\end{DoxySeeAlso}
+Returns the value of deltaT for the current solution. \mbox{\Hypertarget{class_solution_a45756ea0f3bbd5a69e1ddcd12379f398}\label{class_solution_a45756ea0f3bbd5a69e1ddcd12379f398}} 
+\index{Solution@{Solution}!get\+DeltaX@{get\+DeltaX}}
+\index{get\+DeltaX@{get\+DeltaX}!Solution@{Solution}}
+\subsubsection{\texorpdfstring{get\+Delta\+X()}{getDeltaX()}}
+{\footnotesize\ttfamily double Solution\+::get\+DeltaX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the current value for deltaX. \begin{DoxySeeAlso}{See also}
+\hyperlink{class_solution_ab5e6d31c8b567a20dce17b802242bd02}{get\+Delta\+T()};
+\end{DoxySeeAlso}
+Returns the value of deltaX for the current solution. \mbox{\Hypertarget{class_solution_af301d534e2214c1004837350d32569a7}\label{class_solution_af301d534e2214c1004837350d32569a7}} 
+\index{Solution@{Solution}!set\+DeltaT@{set\+DeltaT}}
+\index{set\+DeltaT@{set\+DeltaT}!Solution@{Solution}}
+\subsubsection{\texorpdfstring{set\+Delta\+T()}{setDeltaT()}}
+{\footnotesize\ttfamily void Solution\+::set\+DeltaT (\begin{DoxyParamCaption}\item[{double}]{t }\end{DoxyParamCaption})}
+
+adds a new solution to all\+Solutions. \begin{DoxySeeAlso}{See also}
+\hyperlink{class_solution_a0e651029193eddea478a8f9d68e74355}{set\+Delta\+X()}; 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em t} & new value for deltaT.\\
+\hline
+\end{DoxyParams}
+Changes the value of deltaT for the current solution. 
+\begin{DoxyParams}{Parameters}
+{\em t} & double. new value for deltaT. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_solution_a0e651029193eddea478a8f9d68e74355}\label{class_solution_a0e651029193eddea478a8f9d68e74355}} 
+\index{Solution@{Solution}!set\+DeltaX@{set\+DeltaX}}
+\index{set\+DeltaX@{set\+DeltaX}!Solution@{Solution}}
+\subsubsection{\texorpdfstring{set\+Delta\+X()}{setDeltaX()}}
+{\footnotesize\ttfamily void Solution\+::set\+DeltaX (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption})}
+
+adds a new solution to all\+Solutions. \begin{DoxySeeAlso}{See also}
+\hyperlink{class_solution_af301d534e2214c1004837350d32569a7}{set\+Delta\+T()}; 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & new value for deltaX.\\
+\hline
+\end{DoxyParams}
+Changes the value of deltaX for the current solution. 
+\begin{DoxyParams}{Parameters}
+{\em x} & double. new value for deltaX. \\
+\hline
+\end{DoxyParams}
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

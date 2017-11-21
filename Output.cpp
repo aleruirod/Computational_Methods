@@ -33,7 +33,7 @@ void Output::exportSolution(Solution sol, double tSize, std::string name) {
 		std::ofstream outfile(aux);
 
 		for (size_t j = 0; j < sol.getAllSolutions()[0].size(); j++)
-			outfile << sol.getDeltaX()*j << " " << sol.getAllSolutions()[i][j] << "\n" << std::endl;
+			outfile << sol.getDeltaX()*j << " " << sol.getAllSolutions()[i][j] << std::endl;
 			
 		outfile.close();
 

@@ -9,8 +9,9 @@
 \item 
 static void \hyperlink{class_output_a79b3b86314e979457e5aac1ff4840605}{print\+Solution} (std\+::vector$<$ std\+::vector$<$ double $>$$>$ sols)
 \item 
-\mbox{\Hypertarget{class_output_a0d39b68ef723d6372f7c17e967a1d29a}\label{class_output_a0d39b68ef723d6372f7c17e967a1d29a}} 
-static void {\bfseries export\+Solution} (\hyperlink{class_solution}{Solution} obj, double x\+Size, std\+::string name)
+static void \hyperlink{class_output_a4bbefa0db72e03bed0d48c0277126aab}{export\+Solution} (\hyperlink{class_solution}{Solution} sol, double t\+Size, std\+::string name)
+\item 
+static void \hyperlink{class_output_a71ceb48aa64ba420138bc3be536a457d}{print\+Vector} (std\+::vector$<$ double $>$ v)
 \end{DoxyCompactItemize}
 
 
@@ -20,6 +21,30 @@ The \hyperlink{class_output}{Output} class is utilised to export the content ~\n
  results on the console. 
 
 \subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_output_a4bbefa0db72e03bed0d48c0277126aab}\label{class_output_a4bbefa0db72e03bed0d48c0277126aab}} 
+\index{Output@{Output}!export\+Solution@{export\+Solution}}
+\index{export\+Solution@{export\+Solution}!Output@{Output}}
+\subsubsection{\texorpdfstring{export\+Solution()}{exportSolution()}}
+{\footnotesize\ttfamily void Output\+::export\+Solution (\begin{DoxyParamCaption}\item[{\hyperlink{class_solution}{Solution}}]{sol,  }\item[{double}]{t\+Size,  }\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Exports the \hyperlink{class_solution}{Solution} in several .dat files. 
+\begin{DoxyParams}{Parameters}
+{\em sol} & this is the \hyperlink{class_solution}{Solution} we want to export the results from. \\
+\hline
+{\em t\+Size} & this is the time difference between the different timesteps our solution has. \\
+\hline
+{\em name} & this is the base name for the method used to get the solution we want to export.\\
+\hline
+\end{DoxyParams}
+Exports all results stored in a \hyperlink{class_solution}{Solution} object. 
+\begin{DoxyParams}{Parameters}
+{\em sol} & \hyperlink{class_solution}{Solution}. this is the \hyperlink{class_solution}{Solution} we want to export the results from. \\
+\hline
+{\em t\+Size} & double. this is the time difference between the different timesteps our solution has. \\
+\hline
+{\em name} & std\+::string. this is the base name for the method used to get the solution we want to export. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_output_a79b3b86314e979457e5aac1ff4840605}\label{class_output_a79b3b86314e979457e5aac1ff4840605}} 
 \index{Output@{Output}!print\+Solution@{print\+Solution}}
 \index{print\+Solution@{print\+Solution}!Output@{Output}}
@@ -33,7 +58,23 @@ Prints on console all the solutions stored in a \hyperlink{class_solution}{Solut
 \end{DoxyParams}
 Print all solutions from a vector of double vectors. 
 \begin{DoxyParams}{Parameters}
-{\em v} & std\+::vector$<$std\+::vector$<$double$>$$>$. \hyperlink{class_vector}{Vector} of double vectors that we want to print. \\
+{\em v} & std\+::vector$<$std\+::vector$<$double$>$$>$. Vector of double vectors that we want to print. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_output_a71ceb48aa64ba420138bc3be536a457d}\label{class_output_a71ceb48aa64ba420138bc3be536a457d}} 
+\index{Output@{Output}!print\+Vector@{print\+Vector}}
+\index{print\+Vector@{print\+Vector}!Output@{Output}}
+\subsubsection{\texorpdfstring{print\+Vector()}{printVector()}}
+{\footnotesize\ttfamily void Output\+::print\+Vector (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Prints a vector\textquotesingle{}s contents on console. 
+\begin{DoxyParams}{Parameters}
+{\em v} & this is the vector we want to print.\\
+\hline
+\end{DoxyParams}
+Prints a concrete vector on screen. 
+\begin{DoxyParams}{Parameters}
+{\em v} & std\+::vector$<$double$>$. Vector we want to print on screen. \\
 \hline
 \end{DoxyParams}
 

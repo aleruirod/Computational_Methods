@@ -7,6 +7,5 @@ var annotated_dup =
     [ "Output", "class_output.html", null ],
     [ "RichardsonMethod", "class_richardson_method.html", "class_richardson_method" ],
     [ "Solution", "class_solution.html", "class_solution" ],
-    [ "Tools", "class_tools.html", null ],
-    [ "Vector", "class_vector.html", "class_vector" ]
+    [ "Tools", "class_tools.html", null ]
 ];

@@ -6,6 +6,8 @@ var class_solution =
     [ "getAllSolutions", "class_solution.html#abd28abd062adb793866fd5e1c8ef8639", null ],
     [ "getDeltaT", "class_solution.html#ab5e6d31c8b567a20dce17b802242bd02", null ],
     [ "getDeltaX", "class_solution.html#a45756ea0f3bbd5a69e1ddcd12379f398", null ],
+    [ "setDeltaT", "class_solution.html#af301d534e2214c1004837350d32569a7", null ],
+    [ "setDeltaX", "class_solution.html#a0e651029193eddea478a8f9d68e74355", null ],
     [ "allSolPos", "class_solution.html#af933662f6d08824b37f315fc36678c3b", null ],
     [ "allSolutions", "class_solution.html#a09fa8d2538a87e8d9cba2ee682f729ac", null ],
     [ "D", "class_solution.html#af647b9b893549259060034672babb0f8", null ],
