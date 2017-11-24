@@ -127,10 +127,11 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Creates a vector following the boundary conditions of the problem. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">n</td><td>Length of the vector. </td></tr>
+    <tr><td class="paramname">n</td><td>Length of the vector.</td></tr>
   </table>
   </dd>
 </dl>
+<p>Creates a vector at t = 0. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">n</td><td>int. Length of the vector. </td></tr>
@@ -176,10 +177,11 @@ Static Public Member Functions</h2></td></tr>
 <p>Calculates the two norm for the difference between a certain <a class="el" href="class_solution.html">Solution</a> and the Analytical <a class="el" href="class_solution.html">Solution</a>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">analytSol</td><td>Analytical <a class="el" href="class_solution.html">Solution</a>. </td></tr>
-    <tr><td class="paramname">sol</td><td><a class="el" href="class_solution.html">Solution</a> object we want to compare. </td></tr>
+    <tr><td class="paramname">sol</td><td><a class="el" href="class_solution.html">Solution</a> object we want to compare.</td></tr>
   </table>
   </dd>
 </dl>
+<p>Applies the two norm on two solutions to see how they differ. One of them usually being the Analytical <a class="el" href="class_solution.html">Solution</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">analytSol</td><td><a class="el" href="class_solution.html">Solution</a>. Analytical <a class="el" href="class_solution.html">Solution</a> </td></tr>

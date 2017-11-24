@@ -7,13 +7,13 @@
 * Print all solutions from a vector of double vectors.
 */
 
-void Output::printSolution(std::vector<std::vector<double>> v) {
+void Output::printSolution(std::vector<std::vector<double>> sols) {
 
-	for (size_t i = 0; i < v.size(); i++)
+	for (size_t i = 0; i < sols.size(); i++)
 	{
-		for (size_t j = 0; j < v[i].size(); j++)
+		for (size_t j = 0; j < sols[i].size(); j++)
 		{
-			std::cout << v[i][j] << " "; // for every value in a timestep, we introduce a blank space as separation.
+			std::cout << sols[i][j] << " "; // for every value in a timestep, we introduce a blank space as separation.
 		}
 		std::cout << "\n"; // we introduce a line break between each different solution vector.
 	}
